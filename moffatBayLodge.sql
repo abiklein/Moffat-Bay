@@ -23,6 +23,8 @@ GRANT ALL ON moffat_lodge.* TO 'MoffatLodge'@'localhost';
 -- Drop tables if exist
 DROP TABLE IF EXISTS customer;
 DROP TABLE IF EXISTS reservation;
+DROP TABLE IF EXISTS rooms;
+DROP TABLE IF EXISTS guest_price;
 
 -- create customer table 
 CREATE TABLE customer (
@@ -54,11 +56,19 @@ CREATE TABLE reservation (
 );
 
 -- Create room_size table
-CREATE TABLE room_size(
+CREATE TABLE rooms (
 	room_size_id INT AUTO_INCREMENT,
     room_size VARCHAR(75) NOT NULL,
     
     PRIMARY KEY(room_size_id)
+);
+
+-- create guest_price table
+CREATE TABLE guest_price (
+	number_of_guests	INT			NOT NULL,
+    cost				INT			NOT NULL,
+    
+    PRIMARY KEY(number_of_guests)
 );
 
 -- populate customer table
@@ -77,8 +87,15 @@ VALUES ();
 INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
 VALUES ();
 
--- populate room_size table
-INSERT INTO room_size (room_size_id, room_size) VALUES (1, 'Double Full Beds');
-INSERT INTO room_size (room_size_id, room_size) VALUES (1, 'Queen Bed');
-INSERT INTO room_size (room_size_id, room_size) VALUES (1, 'Double Full Beds');
-INSERT INTO room_size (room_size_id, room_size) VALUES (1, 'King Bed');
+-- populate rooms table
+INSERT INTO rooms (room_size) VALUES ('Double Full Beds');
+INSERT INTO rooms (room_size) VALUES ('Queen Bed');
+INSERT INTO rooms (room_size) VALUES ('Double Full Beds');
+INSERT INTO rooms (room_size) VALUES ('King Bed');
+
+-- populate guest_price table
+INSERT INTO guest_price (number_of_guests, cost) VALUES (1, 115);
+INSERT INTO guest_price (number_of_guests, cost) VALUES (2, 115);
+INSERT INTO guest_price (number_of_guests, cost) VALUES (3, 150);
+INSERT INTO guest_price (number_of_guests, cost) VALUES (4, 150);
+INSERT INTO guest_price (number_of_guests, cost) VALUES (5, 150);
