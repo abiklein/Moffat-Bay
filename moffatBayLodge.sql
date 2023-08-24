@@ -1,9 +1,9 @@
 /*
-    Title: moffat_lodgeSQL.sql
+    Title: moffatBayLodge.sql
     Team: Silver 
     Author(s): Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo 
     Professor: Professor Sampson
-    Date: August 21, 2023
+    Date: August 23, 2023
     Description: Moffat Bay Lodge database
 */
 
@@ -23,7 +23,7 @@ GRANT ALL ON moffat_lodge.* TO 'MoffatLodge'@'localhost';
 -- Drop tables if exist
 DROP TABLE IF EXISTS customer;
 DROP TABLE IF EXISTS reservation;
-DROP TABLE IF EXISTS rooms;
+DROP TABLE IF EXISTS room;
 DROP TABLE IF EXISTS guest_price;
 
 -- create customer table 
@@ -56,17 +56,17 @@ CREATE TABLE reservation (
 
     CONSTRAINT fk_room
     FOREIGN KEY(room_size_id)
-    REFERENCES customer(room_size_id)
+    REFERENCES room(room_size_id)
 
     CONSTRAINT fk_guest_price
     FOREIGN KEY(number_of_guests)
-    REFERENCES customer(number_of_guests)
+    REFERENCES guest_price(number_of_guests)
 );
 
--- Create room_size table
+-- Create room table
 CREATE TABLE room (
 	room_size_id        INT           AUTO_INCREMENT,
-    room_size           VARCHAR(20))   NOT NULL,
+    room_size           VARCHAR(20)   NOT NULL,
     
     PRIMARY KEY(room_size_id)
 );
@@ -88,16 +88,16 @@ INSERT INTO customer (customer_email, customer_first_name, customer_last_name, c
 VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  'Michael@65');
 
 -- populate reservation table
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
-VALUES (1, 'Queen Bed', 2, '2023-10-20', '2023-10-22', 2, 345);
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
-VALUES (2, 'Double Queen Beds', 5, '2024-01-12', '2024-01-15', 3, 450);
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
-VALUES (3,'King Bed', 2, '2023-11-20', '2023-11-26', 6, 690);
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
-VALUES (3, 'Double Queen Beds', 3, '2023-11-20', '2023-11-26', 6, 900);
+INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_date, check_out_date, total_nights, total_cost)
+VALUES (1, 2, 2, '2023-10-20', '2023-10-22', 2, 230);
+INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_date, check_out_date, total_nights, total_cost)
+VALUES (2, 3, 5, '2024-01-12', '2024-01-15', 3, 450);
+INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_date, check_out_date, total_nights, total_cost)
+VALUES (3, 4, 2, '2023-11-20', '2023-11-26', 6, 690);
+INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_date, check_out_date, total_nights, total_cost)
+VALUES (3, 3, 3, '2023-11-20', '2023-11-26', 6, 900);
 
--- populate rooms table
+-- populate room table
 INSERT INTO room (room_size) VALUES ('Double Full Beds');
 INSERT INTO room (room_size) VALUES ('Queen Bed');
 INSERT INTO room (room_size) VALUES ('Double Queen Beds');
