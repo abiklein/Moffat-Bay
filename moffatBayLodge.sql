@@ -53,12 +53,20 @@ CREATE TABLE reservation (
     CONSTRAINT fk_customer
     FOREIGN KEY(customer_id)
     REFERENCES customer(customer_id)
+
+    CONSTRAINT fk_room
+    FOREIGN KEY(room_size_id)
+    REFERENCES customer(room_size_id)
+
+    CONSTRAINT fk_guest_price
+    FOREIGN KEY(number_of_guests)
+    REFERENCES customer(number_of_guests)
 );
 
 -- Create room_size table
 CREATE TABLE room (
 	room_size_id        INT           AUTO_INCREMENT,
-    room_size           VARCHAR(75)   NOT NULL,
+    room_size           VARCHAR(20))   NOT NULL,
     
     PRIMARY KEY(room_size_id)
 );
@@ -80,20 +88,20 @@ INSERT INTO customer (customer_email, customer_first_name, customer_last_name, c
 VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  'Michael@65');
 
 -- populate reservation table
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
-VALUES (1, 'Queen Bed', 2, '2023-10-20', '2023-10-22', 3, 345);
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
+INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
+VALUES (1, 'Queen Bed', 2, '2023-10-20', '2023-10-22', 2, 345);
+INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
 VALUES (2, 'Double Queen Beds', 5, '2024-01-12', '2024-01-15', 3, 450);
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
+INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
 VALUES (3,'King Bed', 2, '2023-11-20', '2023-11-26', 6, 690);
-INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
+INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, total_nights, total_cost)
 VALUES (3, 'Double Queen Beds', 3, '2023-11-20', '2023-11-26', 6, 900);
 
 -- populate rooms table
-INSERT INTO rooms (room_size) VALUES ('Double Full Beds');
-INSERT INTO rooms (room_size) VALUES ('Queen Bed');
-INSERT INTO rooms (room_size) VALUES ('Double Queen Beds');
-INSERT INTO rooms (room_size) VALUES ('King Bed');
+INSERT INTO room (room_size) VALUES ('Double Full Beds');
+INSERT INTO room (room_size) VALUES ('Queen Bed');
+INSERT INTO room (room_size) VALUES ('Double Queen Beds');
+INSERT INTO room (room_size) VALUES ('King Bed');
 
 -- populate guest_price table
 INSERT INTO guest_price (number_of_guests, cost) VALUES (1, 115);
