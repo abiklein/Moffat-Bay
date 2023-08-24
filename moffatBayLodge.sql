@@ -32,7 +32,7 @@ CREATE TABLE customer (
     customer_email		  VARCHAR(75)   NOT NULL,
     customer_first_name   VARCHAR(75)   NOT NULL,
     customer_last_name    VARCHAR(75)   NOT NULL,
-    customer_phone		  VARCHAR(75)   NOT NULL,   
+    customer_phone		  VARCHAR(20)   NOT NULL,   
     customer_password	  VARCHAR(75)   NOT NULL,
      
     PRIMARY KEY(customer_id)
@@ -41,11 +41,11 @@ CREATE TABLE customer (
 CREATE TABLE reservation (
     reservation_id      INT           NOT NULL  AUTO_INCREMENT,
     customer_id         INT           NOT NULL,
-    room_size           VARCHAR(75)   NOT NULL,
-    number_of_guest     VARCHAR(75)   NOT NULL,
+    room_size_id        INT           NOT NULL,
+    number_of_guests    INT           NOT NULL,
     check_in_date       DATE          NOT NULL,
     check_out_date      DATE          NOT NULL,
-    number_of_night     INT           NOT NULL,
+    total_nights        INT           NOT NULL,
     total_cost          INT           NOT NULL,
     
     PRIMARY KEY(reservation_id),
@@ -56,9 +56,9 @@ CREATE TABLE reservation (
 );
 
 -- Create room_size table
-CREATE TABLE rooms (
-	room_size_id INT AUTO_INCREMENT,
-    room_size VARCHAR(75) NOT NULL,
+CREATE TABLE room (
+	room_size_id        INT           AUTO_INCREMENT,
+    room_size           VARCHAR(75)   NOT NULL,
     
     PRIMARY KEY(room_size_id)
 );
