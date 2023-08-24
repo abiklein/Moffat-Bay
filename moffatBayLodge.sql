@@ -81,16 +81,18 @@ VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  'Michael@
 
 -- populate reservation table
 INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
-VALUES ();
+VALUES (1, 'Queen Bed', 2, '2023-10-20', '2023-10-22', 3, 345);
 INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
-VALUES ();
+VALUES (2, 'Double Queen Beds', 5, '2024-01-12', '2024-01-15', 3, 450);
 INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
-VALUES ();
+VALUES (3,'King Bed', 2, '2023-11-20', '2023-11-26', 6, 690);
+INSERT INTO reservation (customer_id, room_size, number_of_guest, check_in_date, check_out_date, number_of_night, total_cost)
+VALUES (3, 'Double Queen Beds', 3, '2023-11-20', '2023-11-26', 6, 900);
 
 -- populate rooms table
 INSERT INTO rooms (room_size) VALUES ('Double Full Beds');
 INSERT INTO rooms (room_size) VALUES ('Queen Bed');
-INSERT INTO rooms (room_size) VALUES ('Double Full Beds');
+INSERT INTO rooms (room_size) VALUES ('Double Queen Beds');
 INSERT INTO rooms (room_size) VALUES ('King Bed');
 
 -- populate guest_price table
