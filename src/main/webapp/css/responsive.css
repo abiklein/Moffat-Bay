@@ -1,0 +1,147 @@
+/*
+Color Theme:
+#004058
+#AA6D23
+#FFF5D3
+ */
+html{/*apply font to entire html page*/
+    font-family: 'Poppins', sans-serif;
+}
+a{/*remove lines and decorations from all links and set color to #FFF5D3*/
+    text-decoration: none;
+    color: #FFF5D3;
+    cursor: pointer;
+}
+a:visited{/*ensure visited links remain #FFF5D3*/
+    color: #FFF5D3;
+}
+h1{/*headers set to be display font*/
+    font-family: "p22-fllw-eaglefeather", sans-serif;
+}
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+    box-sizing: border-box;
+    margin: 0;
+}
+.body{
+    position: relative;
+}
+
+/*navbar*/
+.navbar, .body, .footer{/*use flex box to display content*/
+    display: flex;
+}
+
+.navbar {/*fix navbar to top of page so that bar follows user. Decorate navbar*/
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 64, 88, 0.6);
+    color: #FFF5D3;
+    align-items: center;
+}
+.navbar a{/*align links within navbar*/
+    text-align: center;
+    /*set spacing between links*/
+    padding: 12px 14px;
+}
+.navbar a:not(#homeImg):hover{/*customize hover state for all links in navbar except homeImg link*/
+    color: #AA6D23;
+    background: #FFF5D3;
+}
+.account {/*float account div to the left and hide any overflow elements*/
+    float: left;
+    overflow: hidden;
+}
+.account .dropbtn { /*decorate account div and button*/
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #FFF5D3;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #FFF5D3;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #004058;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.account:hover .dropdown-content {
+    display: block;
+}
+.dropIcon{
+    width: 12%;
+}
+
+.home{
+    text-align: center;
+    margin-left: -50px;
+    padding-right: 50px;
+}
+
+#navImage{
+    width: 100%;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    background: #AA6D23;
+    position: absolute;
+    bottom: 0;
+    padding: 2%;
+    font-size: 12px;
+}
+.col1, .col3, .col4, .col5{
+    width: 21%;
+}
+.col1{
+    text-align: right;
+}
+.col2{
+    width: 26%;
+    color: #004058;
+}
+.col3 a:hover, .col4 a:hover, .col5 a:hover{
+    text-decoration: underline;
+}
+
+#footImage{
+    width: 38%;
+}
+ul{
+    list-style-type: none;
+    line-height: 200%;
+}
+
+
+
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    #navImage{
+        width: 100%;
+    }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+    #navImage{
+        width: 30%;
+    }
+
+}
