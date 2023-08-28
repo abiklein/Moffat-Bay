@@ -3,7 +3,7 @@
     Team: Silver 
     Author(s): Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo 
     Professor: Professor Sampson
-    Date: August 27, 2023
+    Date: August 23, 2023
     Description: Moffat Bay Lodge database
 */
 
@@ -11,10 +11,9 @@
 DROP DATABASE IF EXISTS moffat_lodge;
 -- Create database
 CREATE DATABASE moffat_lodge;
--- USE moffat_lodge;
 
 -- drop database user if exists 
-DROP USER IF EXISTS 'MoffatLodge'@'localhost' ;
+DROP USER 'MoffatLodge'@'localhost';
 -- create database user
 CREATE USER 'MoffatLodge'@'localhost' IDENTIFIED BY 'MLData';
 
@@ -39,20 +38,20 @@ CREATE TABLE customer (
     PRIMARY KEY(customer_id)
 );
 
+-- Create room table
+CREATE TABLE room (
+	room_size_id        INT           NOT NULL 	AUTO_INCREMENT,
+    room_size           VARCHAR(20)   NOT NULL,
+    
+    PRIMARY KEY(room_size_id)
+);
+
 -- create guest_price table
 CREATE TABLE guest_price (
 	number_of_guests	INT			NOT NULL,
     cost				INT			NOT NULL,
     
     PRIMARY KEY(number_of_guests)
-);
-
--- Create room table
-CREATE TABLE room (
-	room_size_id        INT           AUTO_INCREMENT,
-    room_size           VARCHAR(20)   NOT NULL,
-    
-    PRIMARY KEY(room_size_id)
 );
 
 -- create reservation table
@@ -81,6 +80,14 @@ CREATE TABLE reservation (
     REFERENCES guest_price(number_of_guests)
 );
 
+-- populate customer table
+INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
+VALUES('DavidMartina@gmail.com', 'David', 'Martina ','309 501 4452',  'DavidM@2232');
+INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
+VALUES('MariaMartinez@gmail.com', 'Maria', 'Martinez','309 305 1142',  'Martinez_2023');
+INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
+VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  'Michael@65');
+
 -- populate room table
 INSERT INTO room (room_size) VALUES ('Double Full Beds');
 INSERT INTO room (room_size) VALUES ('Queen Bed');
@@ -94,14 +101,6 @@ INSERT INTO guest_price (number_of_guests, cost) VALUES (3, 150);
 INSERT INTO guest_price (number_of_guests, cost) VALUES (4, 150);
 INSERT INTO guest_price (number_of_guests, cost) VALUES (5, 150);
 
--- populate customer table
-INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
-VALUES('DavidMartina@gmail.com', 'David', 'Martina ','309 501 4452',  'd9db8e5cf4179f3b389a0e1076e9bdd7');
-INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
-VALUES('MariaMartinez@gmail.com', 'Maria', 'Martinez','309 305 1142',  '3631267bf3ca3e699cae2942c79f7c2b');
-INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
-VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  '6f9ba9dfca8b264cc2b1e3466beeb33c');
-
 -- populate reservation table
 INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_date, check_out_date, total_nights, total_cost)
 VALUES (1, 2, 2, '2023-10-20', '2023-10-22', 2, 230);
@@ -111,5 +110,3 @@ INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_d
 VALUES (3, 4, 2, '2023-11-20', '2023-11-26', 6, 690);
 INSERT INTO reservation (customer_id, room_size_id, number_of_guests, check_in_date, check_out_date, total_nights, total_cost)
 VALUES (3, 3, 3, '2023-11-20', '2023-11-26', 6, 900);
-
-
