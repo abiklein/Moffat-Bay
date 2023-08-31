@@ -1,0 +1,139 @@
+/*
+Color Theme:
+#004058
+#AA6D23
+#FFF5D3
+ */ 
+.nav{
+	z-index:2;
+
+}
+html{/*apply font to entire html page*/
+    font-family: 'Poppins', sans-serif;
+}
+img{
+	max-width:100%;
+}
+.img{
+	max-height:400px;
+	overflow:hidden;
+}
+a{/*remove lines and decorations from all links and set color to #FFF5D3*/
+    text-decoration: none;
+    cursor: pointer;
+}
+a:visited{/*ensure visited links remain #FFF5D3*/
+    color: #AA6D23;
+}
+h1{/*headers set to be display font*/
+    font-family: "p22-fllw-eaglefeather", sans-serif;
+    color: #AA6D23;
+}
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+    box-sizing: border-box;
+}
+.flexContainer{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    z-index:auto;
+}
+
+/*landing section*/
+.landing{
+	max-width:130vw;
+	max-height:130vh;
+	overflow:hidden;
+}
+#landImg{
+	transform: translate(0,-200px);/*0 right, 500px up*/
+}
+
+/*About Us & Attractions sections*/
+.txt{
+	width:50%;
+	padding:100px;
+}
+.txt p{
+	padding: 20px 0px;
+}
+.img{
+	width:50%;
+	overflow:hidden;
+}
+
+.learnMore{
+	text-align:center;
+	border:none;
+	padding:10px;
+	font-family: 'Poppins', sans-serif;
+	background-color:#AA6D23;
+	width:200px;
+	height:50px;
+	border-radius:10px;
+	transition:0.5s;
+}
+.learnMore:hover{
+	background-color: #004058;
+	cursor:pointer;
+}
+
+/*About Us section*/
+
+#aboutUs{
+	background-color:#FFF5D3;
+	color: #AA6D23;
+}
+#aboutUs p{
+	color: #004058;
+}
+
+/*Attractions section*/
+#attractions{
+	background-color:#004058;
+	color: #AA6D23;
+}
+#attractions h1{
+	color:#FFF5D3;
+}
+#attractImg{
+	transform:translate(0,-200px);
+}
+#attractLearnMore a{
+	color:#004058;
+}
+#attractLearnMore:hover{
+	background-color:#FFF5D3;
+}
+
+
+/* For phones: */
+@media only screen and (max-width: 600px) {
+    
+    .txt{
+		width:100%;
+	}
+	.img{
+		width:100%;
+	}
+	/*landing section*/
+	#landImg{
+	transform: translate(0,0);/*0 right, 0 up*/
+	}
+	#aboutFlexImg{
+		position:absolute;
+		z-index:-10;
+	}
+	#attractImg{
+	transform:translate(0,-150px);
+	}
+	.learnMore{
+		width:70vw;
+	}
+	
+}
+
+/* For tablets: */
+@media only screen and (max-width: 768px) {
+
+}
