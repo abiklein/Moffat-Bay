@@ -17,20 +17,40 @@
     <meta charset="UTF-8">
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
     <!-- Title of your web page -->
     <title>Moffat Bay Lodge</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp" flush="true"/>
+<div class="nav"><jsp:include page="navbar.jsp" flush="true"/></div>
 <!--Body of web page-->
-<div class="body">
-    <div class="landing"></div>
-    <div class="txt"></div>
-    <div class="img"></div>
-    <div class="txt"></div>
-    <div class="img"></div>
+<div class="flexContainer">
+    <div class="landing">
+    	<img id="landImg"src="media/lodge.jpg" alt="Photo of Moffat Bay Lodge"/>
+    </div>
+    <div class="txt" id="aboutUs">
+    	<h1>About Us</h1>
+    	<p>Lorem ipsum dolor sit amet,
+			consectetur adipiscing elit, sed
+			do eiusmod tempor incididunt
+			ut labore et dolore magna
+			aliqua.
+		</p>
+    	<div class="learnMore"><a href="index.jsp">Learn More</a></div>
+    </div>
+    <div class="img" id="aboutFlexImg"><img id="aboutImg"src="media/about.jpg" alt="Lodge Employee Photo"/></div>
+    <div class="img"><img id="attractImg"src="media/scuba.jpg" alt="Scuba Diver Photo"/></div>
+    <div class="txt" id="attractions">
+    	<h1>Attractions</h1>
+    	<p>Lorem ipsum dolor sit amet,
+			consectetur adipiscing elit, sed
+			do eiusmod tempor incididunt
+			ut labore et dolore magna
+			aliqua.
+		</p>
+    	<div class="learnMore" id="attractLearnMore"><a href="index.jsp">Learn More</a></div>
+    </div>
 </div>
 <jsp:include page="footer.jsp" flush="true"/>
 </body>
