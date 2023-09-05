@@ -23,8 +23,8 @@
     </div>
     <div class="col3">
         <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="">Reserve</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.jsp">Reserve</a></li>
             <li><a href="">Search Reservations</a></li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
     <div class="col5">
         <ul>
             <li><a href="login.jsp">Login</a></li>
-            <li><a href="register.jsp">Register</a></li>
+            <li><a href="userRegistration.jsp">Register</a></li>
         </ul>
     </div>
 </div>

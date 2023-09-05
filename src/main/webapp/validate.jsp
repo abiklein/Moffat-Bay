@@ -5,7 +5,7 @@
         String password = request.getParameter("password");
         Class.forName("com.mysql.cj.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/moffat_lodge?" + "user=root&password=");    
-        PreparedStatement pst = conn.prepareStatement("Select customer_email,customer_password from customer where customer_email=? and customer_password=?");
+        PreparedStatement pst = conn.prepareStatement("Select customer_id,customer_password from customer where customer_email=? and customer_password=?");
         pst.setString(1, username);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();  
