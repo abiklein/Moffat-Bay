@@ -6,10 +6,6 @@ Color Theme:
  */ 
 @charset "ISO-8859-1";
 
-.login img{
-	max-width:100%;
-	max-height:20px;
-}
 
 a{/*remove lines and decorations from all links and set color to #FFF5D3*/
     text-decoration: none;
@@ -25,17 +21,24 @@ h1{/*headers set to be display font*/
 * {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
     box-sizing: border-box;
 }
+.flexContainer{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
 .spacer{
-	height:20%;
+	height:100px;
 }
 .loginContainer{
     position: relative;
     display: flex;
     flex-wrap:wrap;
     z-index:auto;
-    height:80%;
+    width:100%;
     flex-direction:column;
     align-items:center;
+
 }
 .link_register{
 	color:#004058 !important;
@@ -54,5 +57,46 @@ h1{/*headers set to be display font*/
 }
 input{
 	width: 300px;
-	height: 30px;
+	height: 40px;
+}
+#button{
+	width: 300px;
+	height: 40px;
+}
+.psw_change {font-size: 12px;
+font-style: normal;}
+
+.password_container{
+	position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    z-index:auto;
+    height:80%;
+    flex-direction:column;
+    align-items:center;
+	font-size: 12px;
+	font-style: normal;
+	text-align: center;
+	height: 300px;
+}
+#login_error_message{
+	color:red;
+	font-style:italic;
+}
+#login_link{
+	color:blue;
+}
+#failpassword{color:red;
+}
+
+.error_login{
+	color: red;
+	text-align: center;
+}
+#logo{
+	max-width:200px;
+}
+.login_header_img{
+	max-width:100%;
+	height:auto;
 }
