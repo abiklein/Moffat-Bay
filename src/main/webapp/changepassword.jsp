@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/login.css" />
     
-<title>Login Page</title>
+<title>Change Password</title>
 </head>
 <body>
 
@@ -34,8 +34,8 @@
 	
 		<img src="media/logo_black.png" id="logo" width="200">
 		<form class= "change_password_form" method= "post" action="change_password_validator.jsp">
-			<h1>Change Password</h1>
-			<input id= "username" type='email' name='username' size='40' maxlength='75' autofocus placeholder="Email Address" required /><br /><br />
+			<h1>Password Change</h1>
+			<input id= "username" type='email' name='username' size='40' maxlength='75' autofocus placeholder="Email" required /><br /><br />
 			
 			<div class= "psw_change">
 			<p >Password must contain at least:</p>
@@ -46,8 +46,8 @@
                 </ul>
                 </div>
 			<input id= "password" type='password' name='new_password' size='40' maxlength='75' placeholder=" New Password" required /><br /><br />
-			<input id= "password" type='password' name='conf_password' size='40' maxlength='75' placeholder=" Confirm Password" required /><br /><br />
-			<button id = "button" type='submit' name ='submit'>Submit</button><br /><br />
+			<input id= "password" type='password' name='conf_password' size='40' maxlength='75' placeholder=" Confirm New Password" required /><br /><br />
+			<button id = "button" type='submit' name ='submit'>Change Password</button><br /><br />
 						
 		</form>
 		
