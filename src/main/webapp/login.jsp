@@ -19,11 +19,14 @@
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
 
-	<div class="flexContainer">
-		<div>
+	<div class = loginImage>
 			<img src="media/login_header.jpg" class="login_header_img"
 				alt="Haystack Rock and the Needles at Cannon Beach on the Oregon">
-		</div>
+			
+			<div class="textLoginImage"	><h1 id="loginheadImg">Login Page</h1></div>
+	</div>
+	<div class="flexContainer">
+		
 		<div class="spacer"></div>
 		<div class="loginContainer">
 
@@ -45,7 +48,7 @@
 					%>
 				</div>
 				<br /> <input id="username" type='email' name='username' size='40'
-					maxlength='75' autofocus placeholder="Email Address" required /><br />
+					maxlength='75' autofocus placeholder="Email" required /><br />
 				<br /> <input id="password" type='password' name='password'
 					size='40' maxlength='75' placeholder="Password" required /><br />
 				<br />
