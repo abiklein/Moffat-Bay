@@ -1,0 +1,363 @@
+/*
+Color Theme:
+#004058
+#AA6D23
+#FFF5D3
+ */
+.nav{
+  z-index:2;
+
+}
+html{/*apply font to entire html page*/
+  font-family: 'Poppins', sans-serif;
+}
+img{
+  max-width:100%;
+}
+
+a{/*remove lines and decorations from all links and set color to #FFF5D3*/
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited{/*ensure visited links remain #FFF5D3*/
+  color: #AA6D23;
+}
+h1{/*headers set to be display font*/
+  font-family: "p22-fllw-eaglefeather", sans-serif;
+  color: #AA6D23;
+}
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+  box-sizing: border-box;
+}
+.flexContainer{
+  position: relative;
+  display: flex;
+  flex-wrap:wrap;
+  z-index:auto;
+  flex-direction:column;
+  align-items:center;
+}
+
+/*landing section*/
+.landing {
+  position:relative;
+  display:flex;
+  flex-direction: row-reverse;
+  max-width:100%;
+  overflow:hidden;
+  text-align:center;
+}
+.landImgContainer{
+  max-width:65%;
+  overflow: hidden;
+}
+
+#landImg{
+  height:100vh;
+  overflow: hidden;
+}
+#landImg img{
+  min-height: 100vh;
+  min-width: 50vw;
+}
+
+.landIntroContainer{
+  max-width:35%;
+  height:100vh;
+  background-color:#004058;
+}
+.landIntroContainer p{
+  padding: 0px 50px 0px 50px;
+  text-align: left;
+  color: #FFF5D3;
+  font-size: 20px;
+}
+#introShape p{
+  line-height: 40px;
+}
+.landIntroContainer h1{
+  padding: 60px 50px 0px 50px;
+  font-size: 150px;
+  color: #AA6D23;
+  text-align: left;
+}
+
+.shape{
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-right:60px solid #004058;
+  z-index: auto;
+  right:435px;
+  top: 40%;
+}
+
+
+/*Amenities sections*/
+.amenities{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #AA6D23;
+  text-align: left;
+  align-items: center;
+}
+.amenities h1{
+  font-size: 50px;
+  font-weight: lighter;
+  padding-top:30px;
+  color: #FFF5D3;
+}
+.amenities li{
+  margin-bottom: 30px;
+}
+#amenityList{
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+/*Accommodations section*/
+.accommodations{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.accomImg{
+  width: 40%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+
+}
+.singleImg{
+  height: 33%;
+  overflow: hidden;
+}
+.singleImg img{
+  height: 140%;
+  width: 180%;
+}
+
+.accomTxt{
+  width: 60%;
+  text-align: left;
+}
+.accomTxt h1{
+  font-size: 50px;
+  font-weight: lighter;
+  padding-top:80px;
+  color: #AA6D23;
+  padding-left: 70px;
+}
+
+.accomTxt p{
+  padding:30px 70px 0 70px;
+
+}
+
+/*contact section*/
+.contact{
+  overflow: hidden;
+  margin: 80px 40px;
+
+}
+#contactInfo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.contactItem{
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-right: 60px;
+}
+.contactIcon{
+  padding-right: 0;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+
+
+/* For phones: */
+@media only screen and (max-width: 600px) {
+  .flexContainer{
+    flex-direction: column;
+  }
+  .landing{
+    max-width:100%;
+    overflow:hidden;
+    flex-direction: column;
+  }
+  .landImgContainer{
+    max-width:100%;
+    overflow: hidden;
+
+  }
+
+  #landImg{
+    width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
+  }
+  #landImg img{
+    min-height: 70vh;
+    min-width: 100%;
+  }
+
+  .landIntroContainer{
+    max-width:100%;
+    background-color:#004058;
+    max-height: 40vh;
+  }
+  .landIntroContainer p{
+    padding: 10% 50px 0px 50px;
+    text-align: left;
+    line-height: 30px;
+    color: #FFF5D3;
+  }
+  .landIntroContainer h1{
+    display: none;
+  }
+  #introShape p{
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .shape{
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-right:60px solid #004058;
+    z-index: auto;
+    right:45vw;
+    top: 48%;
+    transform: rotate(90deg);
+  }
+
+  .amenities{
+    flex-direction: column;
+  }
+  .accomTxt{
+    width: 70%;
+  }
+  .accomTxt p{
+    font-size: 14px;
+    padding:10px 20px 0 20px;
+  }
+  .accomTxt h1{
+    font-size: 10px;
+    padding-top:40px;
+    padding-left: 20px;
+  }
+  .accomImg{
+    width: 30%;
+  }
+  .accomImg img{
+    max-height: 100%;
+    max-width: 150%;
+  }
+
+}
+
+/* For tablets: */
+@media only screen and (max-width: 1024px) {
+
+  .flexContainer{
+    flex-direction: column;
+  }
+
+  .landing{
+    max-width:100%;
+    overflow:hidden;
+    flex-direction: column;
+  }
+  .landImgContainer{
+    max-width:100%;
+    overflow: hidden;
+
+  }
+
+  #landImg{
+    width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
+  }
+  #landImg img{
+    min-height: 70vh;
+    min-width: 100%;
+  }
+
+  .landIntroContainer{
+    max-width:100%;
+    background-color:#004058;
+    max-height: 40vh;
+  }
+  .landIntroContainer p{
+    padding: 10% 50px 0px 50px;
+    text-align: left;
+    line-height: 30px;
+    color: #FFF5D3;
+    font-size: 20px;
+  }
+  .landIntroContainer h1{
+    display: none;
+  }
+  #introShape p{
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .shape{
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-right:60px solid #004058;
+    z-index: auto;
+    right:45vw;
+    top: 52%;
+    transform: rotate(90deg);
+  }
+
+  .amenities{
+    flex-direction: column;
+  }
+  .accomTxt{
+    width: 70%;
+  }
+  .accomTxt p{
+    font-size: 14px;
+    padding:20px 40px 0 40px;
+  }
+  .accomTxt h1{
+    font-size: 30px;
+    padding-top:40px;
+    padding-left: 40px;
+  }
+  .accomImg{
+    width: 30%;
+  }
+  .accomImg img{
+    max-height: 100%;
+    max-width: 150%;
+  }
+
+
+}
+

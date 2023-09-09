@@ -31,7 +31,7 @@
     <div class="col4">
         <ul>
             <li><a href="">Attractions</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
     </div>
     <div class="col5">
