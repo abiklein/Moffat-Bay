@@ -4,6 +4,11 @@
         'http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd'>
 <html lang="en">
 <head>
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Registration success page 
+ -->
 <!--Fonts-->
 <!--Poppins-->
 <link rel="preconnect" href="https://fonts.googleapis.com">

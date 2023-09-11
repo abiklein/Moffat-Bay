@@ -4,6 +4,11 @@
 <%@page import="java.io.*"%>
 <!DOCTYPE html>
 <html>
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Login validation
+ -->
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>

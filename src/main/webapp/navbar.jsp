@@ -2,6 +2,11 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Navbar
+ -->
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/navbar.css" />
