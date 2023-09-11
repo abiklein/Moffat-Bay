@@ -11,7 +11,7 @@
 <!--Navigation Bar-->
 <div class="navbar">
 	    <div class="home"><a id="homeImg" href="index.html"><img id="navImage" src="media/nav_logo.png" alt="Moffat Bay Lodge Text Logo"/></a></div>
-	    <a class="rightNav" href="login.jsp">Reserve</a>
+	    <a class="rightNav" href="reservation.jsp">Reserve</a>
 	    <a class="rightNav" href="">Attractions</a>
 	    <a class="rightNav" href="about.html">About Us</a>
 	    <div class="account rightNav">
@@ -53,7 +53,7 @@
 		      <li id="welcome">Welcome!</li>
 		      <a href="login.jsp"><li><img alt="login icon" src="media/Login.png"/>Sign In</li></a>
 		      <a href="userRegistration.jsp"><li><img alt="register icon" src="media/Register.png"/>Register</li></a>
-		      <a href="login.jsp"><li><img alt="reserve icon" src="media/BookVaca.png"/>Book Your Vacation</li></a>
+		      <a href="reservation.jsp"><li><img alt="reserve icon" src="media/BookVaca.png"/>Book Your Vacation</li></a>
 		      <a href="#"><li><img alt="search icon" src="media/Search.png"/>Search Reservations</li></a>
 		      <div id="menuGrey">
 		      <div id="greyLinks">

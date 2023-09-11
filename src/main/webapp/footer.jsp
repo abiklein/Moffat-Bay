@@ -40,7 +40,7 @@
     <div class="col3">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="login.jsp">Reserve</a></li>
+            <li><a href="reservation.jsp">Reserve</a></li>
             <li><a href="">Search Reservations</a></li>
         </ul>
     </div>
