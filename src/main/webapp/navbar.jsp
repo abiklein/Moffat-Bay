@@ -13,7 +13,7 @@
 	    <div class="home"><a id="homeImg" href="index.html"><img id="navImage" src="media/nav_logo.png" alt="Moffat Bay Lodge Text Logo"/></a></div>
 	    <a class="rightNav" href="login.jsp">Reserve</a>
 	    <a class="rightNav" href="">Attractions</a>
-	    <a class="rightNav" href="">About Us</a>
+	    <a class="rightNav" href="about.html">About Us</a>
 	    <div class="account rightNav">
 	        <button class="dropbtn">Account
 	            <img class="dropIcon"src="media/drop_icon.png" alt="drop down icon"/>
@@ -59,7 +59,7 @@
 		      <div id="greyLinks">
 		      	<a href="index.html"><li>Home</li></a>
 			    <a href="#"><li>Attractions</li></a>
-			    <a href="#"><li>About Us</li></a>
+			    <a href="about.html"><li>About Us</li></a>
 			  </div>
 		      </div>
 		    </ul>

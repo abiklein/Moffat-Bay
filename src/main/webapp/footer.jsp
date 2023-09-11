@@ -1,5 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    // Check if the user is logged in by looking for a session attribute.
+    String loggedInUser = (String) session.getAttribute("loggedUser");
+    
+    // If the user is not logged in, redirect them to the login page.
+    if (loggedInUser == null || loggedInUser.isEmpty()) {
+        
+    }
+    else{
+    	response.sendRedirect("footerLO.jsp");
+    }
+%>    
+
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +47,7 @@
     <div class="col4">
         <ul>
             <li><a href="">Attractions</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
     </div>
     <div class="col5">
