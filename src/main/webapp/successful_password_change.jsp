@@ -17,9 +17,7 @@
 <div class="nav"><jsp:include page="navbar.jsp" flush="true"/></div>
 
 <body>
-	<div class="col1">
-        <a href="index.html"><img id="loginImage" src="media/logo_black.png" alt="Moffat Bay Lodge Graphic Logo"/></a>
-    </div>
+	<img src="media/logo_black.png" id="logo" width="200">
 
 <div class="password_container">
 <h2>Your password has been changed.</h2><br /><br />

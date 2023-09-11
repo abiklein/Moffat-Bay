@@ -22,10 +22,7 @@
 
 
 <div class="flexContainer">
-<div class="col1">
-        <!--  <a href="index.html"><img id="loginImage" src="media/logo_black.png" alt="Moffat Bay Lodge Graphic Logo"/></a>-->
-    
-    </div>
+
 
    	<div class="spacer"></div>
 	<div class = "loginContainer">
@@ -34,6 +31,7 @@
 	
 		<img src="media/logo_black.png" id="logo" width="200">
 		<form class= "change_password_form" method= "post" action="change_password_validator.jsp">
+		
 			<h1>Password Change</h1>
 			<input id= "username" type='email' name='username' size='40' maxlength='75' autofocus placeholder="Email" required /><br /><br />
 			
@@ -51,6 +49,7 @@
 						
 		</form>
 		
+	</div>
 	</div>
 	<div class="footer"><jsp:include page="footer.jsp" flush="true"/></div>
 </body>

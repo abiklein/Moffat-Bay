@@ -11,7 +11,7 @@
 <!--Navigation Bar-->
 <div class="navbar">
 	    <div class="home"><a id="homeImg" href="index.html"><img id="navImage" src="media/nav_logo.png" alt="Moffat Bay Lodge Text Logo"/></a></div>
-	    <a class="rightNav" href="login.jsp">Reserve</a>
+	    <a class="rightNav" href="reservation.jsp">Reserve</a>
 	    <a class="rightNav" href="">Attractions</a>
 	    <a class="rightNav" href="">About Us</a>
 	    <div class="account rightNav">

@@ -38,6 +38,7 @@ h1{/*headers set to be display font*/
     width:100%;
     flex-direction:column;
     align-items:center;
+    justify-content: center;
 
 }
 .link_register{
@@ -117,4 +118,24 @@ font-style: normal;}
 }
 #loginheadImg{
 	color:white;
+}
+#logo{
+	text-align:center;
+	left: 50%;
+	margin-left: 400px
+}
+.confirm_reservation{
+	display:flex;
+	text-align:center;
+	justify-content:center;
+}
+#reservation_logo{margin-left: 400px;}
+
+.reservation_summary{
+  margin: 0 auto;
+  width: 200px; 
+}
+#submit cancel{
+	width: 100px;
+	height: 40px;
 }
