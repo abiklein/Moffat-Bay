@@ -2,7 +2,11 @@
 <%@ page import="java.sql.*" %>
 <!-- possible import for hashing --> 
 <%-- <%@ page import="org.apache.commons.codec.digest.DigestUtils" %> needs a jar file.. i downloaded 4 and put them all in my lib so not sure which one it needs to be --%>
-
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Registration Input
+ -->
 <%
 String email = request.getParameter("email");
 String firstName = request.getParameter("firstName");

@@ -1,6 +1,11 @@
 <%@ page import ="java.sql.*" %>
 <%
-    try{
+// Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+//Date: 9-3-23
+//CSD 460: Assignment 6
+//Login validation
+
+try{
         String username = request.getParameter("username");   
         String password = request.getParameter("password");
         Class.forName("com.mysql.cj.jdbc.Driver");  // MySQL database connection

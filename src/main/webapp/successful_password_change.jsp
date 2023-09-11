@@ -4,6 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Successful password change page
+ -->
 <!-- CSS Files -->
     <!-- CSS Files -->
     <!-- CSS Files -->

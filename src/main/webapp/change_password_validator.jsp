@@ -2,6 +2,11 @@
     pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.io.*"%>
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Change password validator
+ -->
 <%
 String username =request.getParameter("username");
 String Newpass=request.getParameter("new_password");

@@ -2,6 +2,11 @@
     pageEncoding="ISO-8859-1"%>
     <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+footer
+ -->
 <%
     // Check if the user is logged in by looking for a session attribute.
     String loggedInUser = (String) session.getAttribute("loggedUser");
