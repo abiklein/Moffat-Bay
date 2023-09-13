@@ -1,7 +1,11 @@
+<!-- Silver Team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo -->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN'
         'http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd'>
+
 <html lang="en">
 <head>
 <!--Fonts-->
@@ -22,7 +26,7 @@
 <link rel="stylesheet" href="css/registration.css" />
 
 <!-- Title of your web page -->
-<title>Moffat Bay Lodge</title>
+<title>Moffat Bay Lodge Registration</title>
 </head>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>

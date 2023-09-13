@@ -1,6 +1,4 @@
-/**
- * 
- */
+/** Silver Team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo */
 
 function validateForm() {
 	var email = document.forms["registrationForm"]["email"].value;

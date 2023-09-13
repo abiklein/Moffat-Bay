@@ -1,5 +1,7 @@
+<!-- Silver Team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo -->
+
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
-    pageEncoding="US-ASCII" isErrorPage="true"%>
+	pageEncoding="US-ASCII" isErrorPage="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,14 +9,22 @@
 <title>Error Page</title>
 </head>
 <body>
-<% if(response.getStatus() == 500){ %>
-<font color="red">Error: <%=exception.getMessage() %></font><br>
+	<%
+		if (response.getStatus() == 500) {
+	%>
+	<font color="red">Error: <%=exception.getMessage()%></font>
+	<br>
 
-<%-- include login page --%>
-<%@ include file="index.html"%>
-<%}else {%>
-Hi There, error code is <%=response.getStatus() %><br>
-Please go to <a href="index.html">home page</a>
-<%} %>
+	<%-- include login page --%>
+	<%@ include file="index.html"%>
+	<%
+		} else {
+	%>
+	Hi There, error code is
+	<%=response.getStatus()%><br> Please go to
+	<a href="index.html">home page</a>
+	<%
+		}
+	%>
 </body>
 </html>

@@ -1,5 +1,8 @@
+<!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo -->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,22 +14,16 @@
 
 <title>Login Page</title>
 </head>
-
-
-
-<!-- Login form body -->
-
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
 
-	<div class = loginImage>
+	<!-- Login form body -->
+
+	<div class="flexContainer">
+		<div>
 			<img src="media/login_header.jpg" class="login_header_img"
 				alt="Haystack Rock and the Needles at Cannon Beach on the Oregon">
-			
-			<div class="textLoginImage"	><h1 id="loginheadImg">Login Page</h1></div>
-	</div>
-	<div class="flexContainer">
-		
+		</div>
 		<div class="spacer"></div>
 		<div class="loginContainer">
 
@@ -35,37 +32,42 @@
 			<form class="login_form" method="post" action="login_validation.jsp">
 				<div class="error_login">
 					<%
-						//print error message if invalid credentials
-
+					//print error message if invalid credentials
 					String msg = request.getParameter("msg");
 					if ("invalid".equals(msg)) {
 					%>
 					<h4>
-						Please check your credential <br> and try again
+						Invalid Password <br> Please check your credential <br>
+						and try again
+					</h4>
+					<%
+						}
+					if ("User not found".equals(msg)) {
+					%>
+					<h4>
+						Email not found <br> Please Create Account <a
+							class="link_register" href='registration.jsp'> here</a>
 					</h4>
 					<%
 						}
 					%>
 				</div>
 				<br /> <input id="username" type='email' name='username' size='40'
-					maxlength='75' autofocus placeholder="Email" required /><br />
+					maxlength='75' autofocus placeholder="Email Address" required /><br />
 				<br /> <input id="password" type='password' name='password'
 					size='40' maxlength='75' placeholder="Password" required /><br />
 				<br />
 				<button id="button" type='submit' name='submit'>Sign In</button>
 				<br /> <br />
 				<p>
-					<a class="link_reset_password" href='changepassword.jsp'>Forgot
+					<a class="link_reset_password" href='change_password.jsp'>Forgot
 						Password?</a>
 				</p>
-
 				<p id="no_account">
 					Don't have an account? &nbsp;&nbsp; <a class="link_register"
-						href='userRegistration.jsp'>Register</a>
+						href='registration.jsp'>Register</a>
 				</p>
-
 			</form>
-
 		</div>
 	</div>
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
