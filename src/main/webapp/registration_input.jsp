@@ -39,7 +39,7 @@ try {
     } else {    	
     	
     	// Hash the password
-        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt())
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
         
         // Insert the user's information into the database
         String insertUserQuery = "INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password) VALUES (?, ?, ?, ?, ?)";
