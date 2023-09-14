@@ -20,7 +20,15 @@
 
 <title>Moffat Bay Lodge Reservation Summary</title>
 </head>
-
+<%
+//check if user is logged in
+String username = (String) session.getAttribute("username");
+if (username == null) {
+	// User is not logged in, redirect to login page or display a message
+    response.sendRedirect("login.jsp");
+} else {
+	// User is logged in, display the protected content
+%>
 <body>
 
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
@@ -28,8 +36,9 @@
 	<br />
 	<br />
 	<%
-		// Get reservation data from request parameters (user input from reservation page)  
-	String custEmail = request.getParameter("email");
+		// Get reservation data from request parameters (user input from reservation page)
+		
+	
 	String checkInDate = request.getParameter("checkin");
 	String checkOutDate = request.getParameter("checkout");
 	String roomSize = request.getParameter("roomSize");
@@ -137,7 +146,7 @@
 
 			<p>Please review reservation before submitting.</p>
 			<p>Cancel to return to reservation page</p>
-			<br /> <input type="hidden" name="custEmail" value="<%=custEmail%>">
+			<br /> 
 			<input type="hidden" name="checkInDate" value="<%=checkInDate%>">
 			<input type="hidden" name="checkOutDate" value="<%=checkOutDate%>">
 			<input type="hidden" name="roomSizeId" value="<%=roomSize%>">
@@ -157,3 +166,6 @@
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>
+<%
+}
+%>

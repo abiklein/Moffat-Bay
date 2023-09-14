@@ -3,18 +3,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/footer.css" />
 
-</head>
-<body>
 	<!--Footer-->
 	<div class="footer">
 		<div class="col1">
-			<a href="index.html"><img id="footImage"
+			<a href="index.jsp"><img id="footImage"
 				src="media/logo_black.png" alt="Moffat Bay Lodge Graphic Logo" /></a>
 		</div>
 		<div class="col2">
@@ -27,9 +21,9 @@
 		</div>
 		<div class="col3">
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li><a href="reservation.jsp">Reserve</a></li>
-				<li><a href="">Search Reservations</a></li>
+				<li><a href="reservation_search.jsp">Search Reservations</a></li>
 			</ul>
 		</div>
 		<div class="col4">
@@ -45,5 +39,3 @@
 			</ul>
 		</div>
 	</div>
-</body>
-</html>

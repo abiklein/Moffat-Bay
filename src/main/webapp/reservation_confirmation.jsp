@@ -20,6 +20,15 @@
 
 <title>Moffat Bay Lodge Reservation Confirmation</title>
 </head>
+<%
+//check if user is logged in
+String username = (String) session.getAttribute("username");
+if (username == null) {
+	// User is not logged in, redirect to login page or display a message
+    response.sendRedirect("login.jsp");
+} else {
+	// User is logged in, display the protected content
+%>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
 	<br />
@@ -51,19 +60,16 @@
 			e.printStackTrace();
 		}
 		%>
-		<img src="media/logo_black.png" id="logo" width="200"><br />
-		<br />
+		<img src="media/logo_black.png" id="logo" width="200"><br /> <br />
 		<p>
 			Thank you for booking <br />your stay with us!
 		</p>
-		<br />
-		<br />
+		<br /> <br />
 		<p id="reservation id">
-			Your reservation ID is :
+			Your reservation number is :
 			<%=lastId%>
 		</p>
-		<br />
-		<br />
+		<br /> <br />
 		<p>
 			<a class="back_to_home" href="index.html">Back to Home</a>
 		</p>
@@ -73,3 +79,6 @@
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>
+<%
+}
+%>

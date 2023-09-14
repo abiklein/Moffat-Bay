@@ -15,7 +15,15 @@
 
 <title>Lodge Reservation</title>
 </head>
-
+<%
+//check if user is logged in
+String username = (String) session.getAttribute("username");
+if (username == null) {
+	// User is not logged in, redirect to login page or display a message
+    response.sendRedirect("login.jsp");
+} else {
+	// User is logged in, display the protected content
+%>
 <body>
 	<!-- Navbar. -->
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
@@ -29,11 +37,6 @@
 	<div class="reservation_form">
 		<!-- Reservation Form. -->
 		<form id="reservation" action="reservation_summary.jsp" method="post">
-			<!-- Email. -->
-			<label for="email">Email:</label> <input type="email" id="email"
-				name="email" required placeholder="Your Email" /> <br />
-			<br />
-
 			<!-- Check in Date. -->
 			<!-- Check in date can only be selected from the current date in session up until a year from then. -->
 			<label for="checkin">Check-In Date:</label> <input type="date"
@@ -96,3 +99,6 @@
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>
+<% 
+}
+%>
