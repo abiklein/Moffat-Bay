@@ -1,0 +1,86 @@
+/*
+Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-10-23
+CSD 460: Assignment 8
+Reservation Summary Page
+
+Color Theme:
+#004058
+#AA6D23
+#FFF5D3
+ */ 
+@charset "ISO-8859-1";
+
+
+a{/*remove lines and decorations from all links and set color to #FFF5D3*/
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{/*headers set to be display font*/
+    font-family: "p22-fllw-eaglefeather", sans-serif;
+    color: #AA6D23;
+    padding:50px;
+}
+
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+    box-sizing: border-box;
+}
+.flexContainer{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.spacer{
+	height:100px;
+}
+/*
+.loginContainer{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    z-index:auto;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+
+}*/
+.confirm_reservation{
+	display:flex;
+	text-align:center;
+	justify-content:center;
+	margin: 0 auto;
+}
+
+
+.reservation_summary{
+  margin: 0 auto;
+ 
+}
+
+
+/* Submit button  and cancel */
+.reservation_summary input 
+{
+    background-color: #004058;
+    color: #FFF5D3;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 20px;
+    margin:20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation_summary input:hover {
+    background-color: #AA6D23;
+}
+
+.back_to_home{
+	color:#004058 !important;
+}
+.back_to_home:hover{
+	text-decoration: underline;
+}

@@ -1,7 +1,9 @@
 /**
- * 
+ * Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-3-23
+CSD 460: Assignment 6
+Registration Validation
  */
-
 function validateForm() {
 	var email = document.forms["registrationForm"]["email"].value;
 	var firstName = document.forms["registrationForm"]["firstName"].value;

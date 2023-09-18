@@ -59,7 +59,9 @@ ul{
     line-height: 200%;
 }
 
-
+#address{
+	font-weight:500;
+}
 
 
 /* For tablets: */

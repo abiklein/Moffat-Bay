@@ -1,0 +1,194 @@
+/*
+Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-24-23
+CSD 460: Assignment 10
+Attractions Page
+
+Color Theme:
+#004058
+#AA6D23
+#FFF5D3
+ */
+
+html{/*apply font to entire html page*/
+  font-family: 'Poppins', sans-serif;
+}
+img{
+  max-width:100%;
+}
+.img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height:400px;
+  overflow:hidden;
+}
+
+.img img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+a{/*remove lines and decorations from all links and set color to #FFF5D3*/
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited{/*ensure visited links remain #FFF5D3*/
+  color: #AA6D23;
+}
+h1{/*headers set to be display font*/
+  font-family: "p22-fllw-eaglefeather", sans-serif;
+  color: #AA6D23;
+}
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+  box-sizing: border-box;
+}
+.flexContainer{
+  position: relative;
+  display: flex;
+  flex-wrap:wrap;
+  z-index:auto;
+}
+
+/*landing section*/
+.landing {
+  position:relative;
+  max-width:100%;
+  overflow:hidden;
+  text-align:center;
+}
+.landImg{
+	max-width:150%;
+	max-height:150%;
+	min-height:100vh;
+	min-width:100vw;
+}
+
+.landIntroContainer{
+  max-width:100%;
+  height:100vh;
+}
+.landIntroContainer h2{
+	font-family: 'Poppins', sans-serif;
+	font-weight:black;
+	color:white;
+	font-size: 200px;
+	line-height:170px;
+}
+
+#introShape{
+ position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landIntroContainer h1{
+  padding: 60px 50px 0px 50px;
+  font-size: 150px;
+  color: #AA6D23;
+  text-align: left;
+}
+
+
+/*About Us & Attractions sections*/
+.txt{
+  width:50%;
+  padding:100px;
+  max-height:400px;
+  min-height:320px;
+}
+.txt p{
+  padding:20px 0;
+}
+.img{
+  width:50%;
+  overflow:hidden;
+  max-height:400px;
+  min-height:320px;
+}
+
+/*About Us section*/
+
+#hiking{
+  background-color:#FFF5D3;
+  color: #AA6D23;
+}
+#hiking p{
+  color: #004058;
+}
+
+/*Kayaking section*/
+#kayak{
+  background-color:#004058;
+  color: #AA6D23;
+}
+#kayak h1{
+  color:#FFF5D3;
+}
+#kayakImg{
+  /*transform:translate(0,-200px);*/
+  margin:0 auto;
+  display: block;
+}
+
+/*Whale Watching section*/
+
+#scuba{
+  background-color:#FFF5D3;
+  color: #AA6D23;
+}
+#scuba p{
+  color: #004058;
+}
+#scubaImg{
+  /*transform:translate(0,-200px);*/
+  margin:0 auto;
+  display: block;
+}
+
+/*Scuba section*/
+#whale{
+  background-color:#004058;
+  color: #AA6D23;
+}
+#whale h1{
+  color:#FFF5D3;
+}
+
+
+
+
+/* For phones: */
+@media only screen and (max-width: 600px) {
+  img{
+    width:400px;
+  }
+  .flexContainer{
+    flex-direction: column;
+  }
+  .txt{
+    width:100%;
+    padding:30px;
+  }
+  .img{
+    width:100%;
+  }
+}
+
+/* For tablets: */
+@media only screen and (max-width: 1024px) {
+  img{
+    width:400px;
+  }
+  .flexContainer{
+    flex-direction: column;
+  }
+  .txt{
+    width:100%;
+    padding:50px 0 0 50px;
+  }
+  .img{
+    width:100%;
+  }
+  
+}
