@@ -1,14 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN'
         'http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd'>
+
 <html lang="en">
-<head>
 <!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
 Date: 9-3-23
 CSD 460: Assignment 6
 Registration success page 
  -->
+<head>
 <!--Fonts-->
 <!--Poppins-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +32,8 @@ Registration success page
 <link rel="stylesheet" href="css/registration.css" />
 
 <!-- Title of your web page -->
-<title>Moffat Bay Lodge</title>
+<title>Moffat Bay Lodge Registration Success</title>
+
 <script>
 	// Function to redirect to another page after a specified time (in milliseconds)
 	function redirectToPage() {
@@ -58,6 +61,6 @@ Registration success page
 			</p>
 		</div>
 	</div>
-	<jsp:include page="footer.jsp" flush="true" />
+	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>

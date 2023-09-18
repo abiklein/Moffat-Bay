@@ -1,0 +1,221 @@
+/*
+Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-17-23
+CSD 460: Assignment 9
+Reservation Search Page
+
+Color Theme:
+#004058
+#AA6D23
+#FFF5D3
+ */ 
+@charset "ISO-8859-1";
+
+
+body {
+    font-size: 18px;
+    background-color: #FFF5D3;/* change to this picture background media/lodge.jpg */
+    background-size: cover;
+}
+
+h1{/*headers set to be display font*/
+    font-family: "p22-fllw-eaglefeather", sans-serif;
+    word-spacing:10px;
+    color: #AA6D23;
+}
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+    box-sizing: border-box;
+}
+#logo{
+	max-width:200px;
+}
+
+/*Form Section (inputs and the form itself)*/
+.container_form img{
+	 margin: auto;
+    display: block;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+.flexContainer{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.container_form {
+	display: grid;
+    width: 100%;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 4px;
+    background: #FFF5D3;
+}
+
+.search_form{
+	width:100%;
+	height:60vh;
+	text-align:center;
+}
+.container_form,
+.form__input,
+.form__button {
+	font-family: 'Poppins', sans-serif;
+    font: 500 1rem;
+    
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form__title {
+	margin-top:3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size:70px;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    max-width:650px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: #009579;
+    background: #ffffff;
+}
+
+.form__message--error {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    color: #cc3333;
+}
+
+.form__input-terms {
+	margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.form__button {
+    width: 100%;
+    max-width:650px;
+    padding: 1rem 2rem;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: #AA6D23;
+    transition:0.5s;
+}
+
+.form__button:hover {
+    background: #004058;
+}
+.form_button_false{
+	width: 100%;
+    max-width:650px;
+    padding: 1rem 2rem;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: #6e6e6e;
+    transition:0.5s;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: #252c6a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+
+
+
+/*Search Output - the output after clicking the submit button on form*/
+.printArea{
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	min-height:50vh;
+	width:100%;
+	background-color: white;
+}
+.printAreaHide{
+	display:none;
+}
+.noResults{
+	text-align:center;
+	padding-top:3rem;
+}
+#noResultsLink{
+	color:#004058;
+}
+#noResultsLink:visited{
+	color:#004058;
+}
+#noResultsLink:hover{
+	text-decoration:underline;
+}
+
+#searchOutput{
+	padding-bottom:80px;
+}
+.resSummary{
+	padding-top:35px;
+	padding-bottom:20px;
+	color: #004058;
+	text-align:center;
+}
+.rowName{
+	font-weight:bold;
+	color: #AA6D23;
+}
+
+@media only screen and (max-width: 600px) {
+	.form__title {
+	margin-top:3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size:40px;
+	}
+	#container{
+		padding:0px 10px;
+		font-size:16px;
+	}
+}

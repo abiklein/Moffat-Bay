@@ -30,7 +30,7 @@ Error page
 <link rel="stylesheet" href="css/registration.css" />
 
 <!-- Title of your web page -->
-<title>Moffat Bay Lodge</title>
+<title>Moffat Bay Lodge Error</title>
 </head>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>

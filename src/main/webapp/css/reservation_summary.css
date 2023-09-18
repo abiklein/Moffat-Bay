@@ -1,5 +1,9 @@
-@charset "ISO-8859-1";
 /*
+Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
+Date: 9-10-23
+CSD 460: Assignment 8
+Reservation Summary Page
+
 Color Theme:
 #004058
 #AA6D23
@@ -55,26 +59,28 @@ h1{/*headers set to be display font*/
   margin: 0 auto;
  
 }
-#submit cancel{
-	width: 150px;
-	height: 40px;
-}
+
+
 /* Submit button  and cancel */
-.reservation_summary input[type="submit"] 
+.reservation_summary input 
 {
     background-color: #004058;
     color: #FFF5D3;
     font-size: 16px;
     padding: 10px 20px;
-    border: none;
+    border: 20px;
+    margin:20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.reservation_summary input[type="submit"]:hover {
+.reservation_summary input:hover {
     background-color: #AA6D23;
 }
 
-/*.confirm_reservation{
-	margin: 0 auto;
-}*/
+.back_to_home{
+	color:#004058 !important;
+}
+.back_to_home:hover{
+	text-decoration: underline;
+}

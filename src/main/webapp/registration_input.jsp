@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.sql.*" %>
-<!-- possible import for hashing --> 
-<%-- <%@ page import="org.apache.commons.codec.digest.DigestUtils" %> needs a jar file.. i downloaded 4 and put them all in my lib so not sure which one it needs to be --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="org.mindrot.jbcrypt.BCrypt"%>
 <!-- Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
 Date: 9-3-23
 CSD 460: Assignment 6
@@ -37,14 +37,12 @@ try {
         // Email already exists, set an error message
         request.setAttribute("errorMessage", "Email already exists. Try logging into your account <a href=\"login.jsp\">here<a>.");
         // Forward the request back to the registration page
-        request.getRequestDispatcher("userRegistration.jsp").forward(request, response);
+        request.getRequestDispatcher("registration.jsp").forward(request, response);
     } else {    	
-    	//TODO INSERT HASHING CODE HERE
     	
-        //Hash the password securely
-        //String hashedPassword = DigestUtils.sha256Hex(password); //practice code used with import above
+    	// Hash the password
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
         
-
         // Insert the user's information into the database
         String insertUserQuery = "INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password) VALUES (?, ?, ?, ?, ?)";
         stmt = conn.prepareStatement(insertUserQuery);
@@ -52,7 +50,7 @@ try {
         stmt.setString(2, firstName);
         stmt.setString(3, lastName);
         stmt.setString(4, telephone);
-        stmt.setString(5, password); //TODO need to change to the hashed password once we know how that will be done
+        stmt.setString(5, hashedPassword); 
 
         int rowsAffected = stmt.executeUpdate();
 
