@@ -46,9 +46,10 @@ Attractions Page
 <!--Body of web page-->
 <div class="landing">
     <div class="landIntroContainer">
-    	<img alt="Attractions Landing Image" id="landImg" src="media/attractions.png"/>
+      <img id="landImg" alt="Attractions Landing Image"  src="media/attractions.png"/>
       <div id="introShape">
       	<h2>STAY ACTIVE</h2>
+      	<div class="whiteBox"><span class="spacer"></span><p>There Is Something For Everyone at Moffat Bay Lodge</p><span class="spacer"></span></div>
       </div>
     </div>
   </div>
@@ -58,9 +59,10 @@ Attractions Page
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
-		<div class="img">
+		<div class="img" id="kayakFlexImg">
 			<img id="kayakImg" src="media/kayak.jpg" alt="Kayaking Photo" />
 		</div>
+		
 		<div class="img" id="hikeFlexImg">
 			<img id="hikeImg" src="media/hike.jpg" alt="Hiking Photo" />
 		</div>
@@ -70,13 +72,15 @@ Attractions Page
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
-		<div class="txt" id="whale">
-			<h1>Whale Watching</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
-		<div class="img" id="whaleFlexImg">
-			<img id="whaleImg" src="media/whale3.jpg" alt="Whale Watching Photo" />
+		<div class="reverse">
+			<div class="txt" id="whale">
+				<h1>Whale Watching</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="img" id="whaleFlexImg">
+				<img id="whaleImg" src="media/whale3.jpg" alt="Whale Watching Photo" />
+			</div>
 		</div>
 		<div class="img">
 			<img id="scubaImg" src="media/scuba.jpg" alt="Scuba Diver Photo" />

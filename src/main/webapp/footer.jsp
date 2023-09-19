@@ -11,7 +11,7 @@ Footer
 	<div class="footer">
 		<div class="col1">
 			<a href="index.jsp"><img id="footImage"
-				src="media/salmon7.png" alt="Salmon Logo" /></a>
+				src="media/salmon.png" alt="Salmon Logo" /></a>
 		</div>
 		<div class="col2">
 			<!--Moffat Bay Lodge Address-->
