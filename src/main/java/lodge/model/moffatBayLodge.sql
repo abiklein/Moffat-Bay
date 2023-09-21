@@ -73,11 +73,14 @@ CREATE TABLE reservation (
 
 -- populate customer table
 INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
-VALUES('DavidMartina@gmail.com', 'David', 'Martina ','309 501 4452',  'DavidM@2232');
+VALUES('DavidMartina@gmail.com', 'David', 'Martina ','309 501 4452',  '$2a$10$c305/n9aoc0E1r/8A61nLucYW6qr.DSyEh1UN.mBiTbuzTAYazMoG');
+-- DavidMartina@gmail.com password unhashed is DavidM@2232
 INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
-VALUES('MariaMartinez@gmail.com', 'Maria', 'Martinez','309 305 1142',  'Martinez_2023');
+VALUES('MariaMartinez@gmail.com', 'Maria', 'Martinez','309 305 1142',  '$2a$10$hqf7sodiPK6170BXC2LXG.qaVqQrWsNQt320jYzPDukHhtgiwonPW');
+-- MariaMartinez@gmail.com password unhashed is Martinez_2023
 INSERT INTO customer (customer_email, customer_first_name, customer_last_name, customer_phone, customer_password)
-VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  'Michael@65');
+VALUES('MichaelGarcia@yahoo.com', 'Michael', 'Garcia','309 492 4132',  '$2a$10$qG4M4u7jt8VYp/gfAIK.UuxukPH7oL.5HluDP0QOqshn/ucikdoMW');
+-- MichaelGarcia@yahoo.com password unhashed is Michael@65
 
 -- populate room table
 INSERT INTO room (room_size, room_cost) VALUES ('Double Full Beds', 110);
