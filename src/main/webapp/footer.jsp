@@ -17,11 +17,11 @@ if (username == null) {
 	<div class="footer">
 		<div class="col1">
 			<a href="index.jsp"><img id="footImage"
-				src="media/logo_black.png" alt="Moffat Bay Lodge Graphic Logo" /></a>
+				src="media/salmon.png" alt="Salmon Logo" /></a>
 		</div>
 		<div class="col2">
 			<!--Moffat Bay Lodge Address-->
-			<ul>
+			<ul id="address">
 				<li>S321 Fake Drive</li>
 				<li>Moffat Bay, Joviedsa Island</li>
 				<li>93021-1234</li>
@@ -36,8 +36,8 @@ if (username == null) {
 		</div>
 		<div class="col4">
 			<ul>
-				<li><a href="">Attractions</a></li>
-				<li><a href="">About Us</a></li>
+				<li><a href="attractions.jsp">Attractions</a></li>
+				<li><a href="about.jsp">About Us</a></li>
 			</ul>
 		</div>
 		<div class="col5">
@@ -52,11 +52,11 @@ if (username == null) {
 	<div class="footer">
 		<div class="col1">
 			<a href="index.jsp"><img id="footImage"
-				src="media/logo_black.png" alt="Moffat Bay Lodge Graphic Logo" /></a>
+				src="media/salmon.png" alt="Salmon Logo" /></a>
 		</div>
 		<div class="col2">
 			<!--Moffat Bay Lodge Address-->
-			<ul>
+			<ul id="address">
 				<li>S321 Fake Drive</li>
 				<li>Moffat Bay, Joviedsa Island</li>
 				<li>93021-1234</li>
@@ -71,8 +71,8 @@ if (username == null) {
 		</div>
 		<div class="col4">
 			<ul>
-				<li><a href="">Attractions</a></li>
-				<li><a href="">About Us</a></li>
+				<li><a href="attractions.jsp">Attractions</a></li>
+				<li><a href="about.jsp">About Us</a></li>
 			</ul>
 		</div>
 		<div class="col5">
