@@ -6,7 +6,13 @@ CSD 460: Assignment 6
 Footer
  -->
 <link rel="stylesheet" href="css/footer.css" />
+<%
+//check if user is logged in
+String username = (String) session.getAttribute("username");
 
+if (username == null) {
+	// User is not logged in, display not logged in nav bar
+%>
 	<!--Footer-->
 	<div class="footer">
 		<div class="col1">
@@ -30,7 +36,7 @@ Footer
 		</div>
 		<div class="col4">
 			<ul>
-				<li><a href="">Attractions</a></li>
+				<li><a href="attractions.jsp">Attractions</a></li>
 				<li><a href="about.jsp">About Us</a></li>
 			</ul>
 		</div>
@@ -41,3 +47,38 @@ Footer
 			</ul>
 		</div>
 	</div>
+<%} else { %>
+<!--Footer-->
+	<div class="footer">
+		<div class="col1">
+			<a href="index.jsp"><img id="footImage"
+				src="media/salmon.png" alt="Salmon Logo" /></a>
+		</div>
+		<div class="col2">
+			<!--Moffat Bay Lodge Address-->
+			<ul id="address">
+				<li>S321 Fake Drive</li>
+				<li>Moffat Bay, Joviedsa Island</li>
+				<li>93021-1234</li>
+			</ul>
+		</div>
+		<div class="col3">
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="reservation.jsp">Reserve</a></li>
+				<li><a href="reservation_search.jsp">Search Reservations</a></li>
+			</ul>
+		</div>
+		<div class="col4">
+			<ul>
+				<li><a href="attractions.jsp">Attractions</a></li>
+				<li><a href="about.jsp">About Us</a></li>
+			</ul>
+		</div>
+		<div class="col5">
+			<ul>
+				<li><a href="logout.jsp">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+<% } %>
