@@ -37,29 +37,30 @@ Reservation Search Page
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
 	<div class="flexContainer" id="top">
+	<div class="spacer" id="bottom">
 		<script type="text/javascript" src="js/searchValidation.js"></script>
 		
 		<!--Body of web page-->
 		<div class="container_form">
-			<h1 class="form__title">Reservation Search</h1>
+			<h1 class="form_title">Reservation Search</h1>
 			<form class="search_form" id="searchForm" name="searchForm" 
 				oninput="return validateForm()" action="#printAreaID" method="post">
-				<div class="form__message--error" id="emailError"></div>
-				<div class="form__input-group">
+				<div class="form_message--error" id="emailError"></div>
+				<div class="form_input-group">
 				<!-- Input for email -->
-					<input class="form__input" type="text" name="email" id="email"
+					<input class="form_input" type="text" name="email" id="email"
 						placeholder="Email" onkeyup="checkInput2(this)">
 				</div>
 				<br/>
 				<p>OR</p>
 				<br/>
-				<div class="form__input-group">
+				<div class="form_input-group">
 				<!-- Input for reservation ID -->
-					<input class="form__input" type="number" name="reservationID"
+					<input class="form_input" type="number" name="reservationID"
 						id="reservationID" placeholder="Reservation ID" onkeyup="checkInput1(this)">
-					<div class="form__message--error" id="reservationIDError"></div>
+					<div class="form_message--error" id="reservationIDError"></div>
 				</div>				
-				<button class="form__button" type="submit" id="submitBtn" disabled value="Search">Search</button>
+				<button class="form_button" type="submit" id="submitBtn" disabled value="Search">Search</button>
 			</form>
 			
 			<script>
@@ -112,7 +113,10 @@ Reservation Search Page
     if (request.getMethod().equals("POST")) {
     %>
         <!-- Script: show #printAreaID whenever the form is submitted -->
-    	<script>document.getElementById("printAreaID").className = "printArea";</script>
+    	<script>
+    	document.getElementById("printAreaID").className = "printArea";
+    	document.getElementById("belowTxtSpace").className = "whiteSpacer";
+    	</script>
     	
     	<%
     	
@@ -142,7 +146,7 @@ Reservation Search Page
 	                resultSet = preparedStatement.executeQuery();
 	                //if there is no data for that email, return an error
 	                if(!resultSet.next()){
-						out.print("<div class='noResults'>There were no results. <br/> Please enter an email associated with a reservation</br> or a valid Reservation ID in the form <a id='noResultsLink' href='#top'>above</a>.</div>");
+						out.print("<div class='noResults'><span class='noResultsBold'>There were no results.</span> <br/> Please enter an email associated with a reservation</br> or a valid Reservation ID in the form <a id='noResultsLink' href='#top'>above</a>.</div>");
 					}
 	                //otherwise, while there is data, do the following
 	                else{
@@ -280,7 +284,7 @@ Reservation Search Page
 				</div>
 	<%			}
                     //print error if there is no data.
-                    else{out.print("<div class='noResults'>There were no results. <br/> Please enter a valid Reservation ID <br/> or an email associated with a reservation in the form <a id='noResultsLink' href='#top'>above</a>.</div>");}
+                    else{out.print("<div class='noResults'><span class='noResultsBold'>There were no results.</span> <br/> Please enter a valid Reservation ID <br/> or an email associated with a reservation in the form <a id='noResultsLink' href='#top'>above</a>.</div>");}
             	
             }
             //close database connection
@@ -295,7 +299,16 @@ Reservation Search Page
 		</div>
 			
 		</div>
-		</div>
+		<div class="spacer" id="belowTxtSpace"></div>
+		 <%if (request.getMethod().equals("POST")) {%>
+        <!-- Script: hide #belowTxtSpace whenever the form is submitted -->
+    	<script>
+    	document.getElementById("belowTxtSpace").className = "whiteSpacer";
+    	</script>
+    	
+    	<% }%>
 		<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
+		</div>
+		</div>
 </body>
 </html>

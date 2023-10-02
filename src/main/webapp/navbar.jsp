@@ -115,8 +115,9 @@ if (username == null) {
 			<ul id="menu">
 				<li id="welcome">Welcome, <%=firstName %> <%=lastName %></li>
 				<li><a href="logout.jsp"><img alt="login icon" src="media/Logout.png" />Logout</a></li>
+				<li><a href="registration.jsp"><img alt="register icon"	src="media/Register.png" />Register</a></li>
 				<li><a href="reservation.jsp"><img alt="reserve icon" src="media/BookVaca.png" />Book Your Vacation</a></li>
-				<li><a href="reservation_search.jsp"><img alt="search icon" src="media/Search.png" />Search Reservations</a></li>
+				<li><a href="reservation_search.jsp"><img alt="search icon"	src="media/Search.png" />Search Reservations</a></li>
 				<div id="menuGrey">
 					<div id="greyLinks">
 						<li><a href="index.jsp">Home</a></li>

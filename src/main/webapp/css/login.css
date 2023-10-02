@@ -16,11 +16,21 @@ a{/*remove lines and decorations from all links and set color to #FFF5D3*/
     text-decoration: none;
     cursor: pointer;
 }
+html{
+	background-image: url("../media/loginBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+html,body{
+	min-height:100%;
+}
 
 h1{/*headers set to be display font*/
     font-family: "p22-fllw-eaglefeather", sans-serif;
-    color: #AA6D23;
-    padding:50px;
+    color: #FFF5D3;
+    padding-top:20px;
+    padding-bottom:20px; 
 }
 
 * {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
@@ -32,42 +42,71 @@ h1{/*headers set to be display font*/
 	align-items:center;
 }
 
-.spacer{
+#belowTxtSpace{
 	height:100px;
 }
+#bottom{
+	min-height:calc(100vh - 655px);
+	width:100%;
+	max-width:100%;
+	}
+.containContainer{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:100%;
+}
 .loginContainer{
+	width:400px;
+	background: rgba(170, 109, 35, 0.8);
     position: relative;
     display: flex;
     flex-wrap:wrap;
     z-index:auto;
-    width:100%;
+    margin:25vh 0;
+    padding:20px;
     flex-direction:column;
     align-items:center;
     justify-content: center;
 
 }
 .link_register{
-	color:#004058 !important;
+	color:#FFF5D3 !important;
 }
 .link_register:hover{
 	text-decoration: underline;
 }
 .link_reset_password{
-	color:#004058 !important;
+	color:#FFF5D3 !important;
 }
 .link_reset_password:hover{
 	text-decoration: underline;
 }
 #no_account{
 	padding:20px 0;
+	color:#004058;
 }
 input{
 	width: 300px;
 	height: 40px;
 }
-#button{
-	width: 300px;
-	height: 40px;
+#button {
+    min-width: 300px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #004058;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background:#FFF5D3;
+    transition:0.5s;
+}
+
+#button:hover {
+    background: #004058;
+    color: #FFF5D3;
 }
 .psw_change {font-size: 12px;
 font-style: normal;}
@@ -86,17 +125,17 @@ font-style: normal;}
 	height: 300px;
 }
 #login_error_message{
-	color:red;
+	color:#fadfc2;
 	font-style:italic;
 }
 #login_link{
 	color:blue;
 }
-#failpassword{color:red;
+#failpassword{color:#fadfc2;
 }
 
 .error_login{
-	color: red;
+	color: #fadfc2;
 	text-align: center;
 }
 #logo{
@@ -144,3 +183,4 @@ font-style: normal;}
 	width: 100px;
 	height: 40px;
 }
+

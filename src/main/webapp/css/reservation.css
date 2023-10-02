@@ -1,7 +1,7 @@
 /*
 Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
-Date: 9-10-23
-CSD 460: Assignment 7
+Date: 9-03-23
+CSD 460
 Reservation Page
 
 Color Theme:
@@ -10,9 +10,40 @@ Color Theme:
 #FFF5D3
  */ 
 
-/* Calendar date input fields */
-#checkin,
-#checkout {
+/* reservation.css */
+.flexContainer{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.spacer{
+	height:100px;
+}
+#bottom{
+	min-height:100vh;
+	width:100%;
+	max-width:100%;
+	}
+.containContainer{
+	width:100%;
+}
+
+#logo {
+    text-align: center;
+    left: 50%;
+}
+
+h1 {
+    /* headers set to be display font */
+    font-family: "p22-fllw-eaglefeather", sans-serif;
+    color: #AA6D23;
+    padding: 50px;
+}
+
+
+/* Email input field. */
+#email {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -21,7 +52,23 @@ Color Theme:
     font-size: 16px;
 }
 
-/* Room size dropdown */
+/* Input fields. */
+#checkin,
+#checkout, #roomSize, #numGuests {
+    width: 100%;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+label{
+	color:#004058;
+	font-weight:500;
+}
+
+/* Room size dropdown. */
 #roomSize {
     width: 100%;
     padding: 10px;
@@ -31,22 +78,27 @@ Color Theme:
     font-size: 16px;
 }
 
-/* Submit button */
+/* Submit button. */
 .reservation_form input[type="submit"] {
-    background-color: #004058;
-    color: #FFF5D3;
-    font-size: 16px;
-    padding: 10px 20px;
+    min-width: 100%;
+    padding: 1rem 2rem;
+    margin-top:2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    outline: none;
     cursor: pointer;
+    background: #AA6D23;
+    transition:0.5s;
 }
 
 .reservation_form input[type="submit"]:hover {
-    background-color: #AA6D23;
+     background: #004058;
 }
 
-/* Additional styles for the form container */
+/* Form container. */
 .reservation_form {
     width: 80%;
     max-width: 600px;
@@ -58,15 +110,15 @@ Color Theme:
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Center the form */
+/* Center the form. */
 .reservation_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
-/* Adjustments for larger screens */
+/* Adjustments for larger screens. */
 @media (min-width: 768px) {
     .reservation_form {
         width: 60%;

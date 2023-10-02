@@ -9,7 +9,7 @@ Login error page
  -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Error Page</title>
+<title>Error: Login</title>
 </head>
 <body>
 	<%

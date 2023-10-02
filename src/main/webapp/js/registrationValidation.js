@@ -53,7 +53,7 @@ function validateForm() {
 		document.getElementById("pwordError").innerHTML = "A Password is Required";
 		errors.push("no password");
 	} else if (!passwordRegex.test(password)) {
-		document.getElementById("pwordError").innerHTML = "Password Needs to Contain: 8 characters, 1 uppercase letter, and 1 lowercase letter";
+		document.getElementById("pwordError").innerHTML = "Password Does Not Meet Requirements";
 		errors.push("password doesnt meet criteria");
 	} else {
 		document.getElementById("pwordError").innerHTML = "";
@@ -79,4 +79,14 @@ function toggleSubmitButton() {
 	var isValid = validateForm();
 	var submitButton = document.getElementById("submitBtn");
 	submitButton.disabled = !isValid;
+	if(!isValid){
+	document.getElementById("submitBtn").className = "form_button_false";
+	//document.getElementById("submitBtn").style.backgroundColor = "#A9A9A9";
+	}
+	else if(isValid){
+	document.getElementById("submitBtn").className = "form_button";
+	 //document.getElementById("submitBtn").style.backgroundColor = "#AA6D23";
+	 //change hover state of button
+	 
+	}
 }

@@ -10,8 +10,8 @@ Change password validator
  -->
 <%
 	String username = request.getParameter("username");
-	String newPass = request.getParameter("new_password");
-	String confPass = request.getParameter("conf_password");
+	String newPass = request.getParameter("password");
+	String confPass = request.getParameter("confPassword");
 	
 	String dbUrl = "jdbc:mysql://localhost:3306/moffat_lodge?";
 	String dbUsername = "MoffatLodge";

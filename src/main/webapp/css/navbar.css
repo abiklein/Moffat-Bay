@@ -84,7 +84,7 @@ h1{/*headers set to be display font*/
 .dropdown-content {
     display: none;
     position: fixed;
-    background-color: #FFF5D3;
+    background-color: #f1d8a7;
     min-width: 154px;
     z-index: 1;
     top:2.5em;
@@ -127,16 +127,10 @@ h1{/*headers set to be display font*/
 .hamburger{
 	display:none;
 }
-/*.hamburger{
-	display:none;
-}
-.mobile-nav{
-	display:none;
-}*/
 
 
-/* For tablets: */
-@media only screen and (max-width: 600px) {
+/* For phones: */
+@media only screen and (max-width: 600px){
 	.navbar{
 		display:none;
 	}
@@ -291,7 +285,7 @@ h1{/*headers set to be display font*/
 }
 
 /* For tablet: */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), ((max-width: 950px) and (max-height:600px)) {
 	.navbar{
 		display:none;
 	}
@@ -440,20 +434,23 @@ h1{/*headers set to be display font*/
 		left:18%;
 	}
 	#menuGrey{
-		border: solid grey 1px;
-		background: lightgrey;
+		border: none;
+		background: #004058;
 		position: absolute;
-		width:100vw;
+		width:100%;
 		height:50%;
 		top:72%;
 		bottom:0;
-		left:-20px;
 		overflow:hidden;
+		left:0px;
+	}
+	#greyLinks li a{
+		padding-top:20px;
+		padding-left:92px;
+		color:#FFF5D3;
 	}
 	#greyLinks{
-		position:absolute;
-		padding-top:20px;
-		left:73px;
+	padding-top:20px;
 	}
 	
 	#menu li
@@ -471,3 +468,15 @@ h1{/*headers set to be display font*/
 	}
 
 }
+@media only screen and (max-height: 530px) {
+		#menu li{
+			padding: 0;
+			font-size:14px;
+		}
+		#menu img{
+			width:18px;
+		}
+		#menuGrey{
+			top:80%;
+		}
+	}

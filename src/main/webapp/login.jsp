@@ -10,12 +10,24 @@ Login page
  -->
 <head>
 <meta charset="ISO-8859-1">
+<!--Fonts-->
+
+<!--Poppins-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+	rel="stylesheet">
+	
+<!--P22 Eaglefeather-->
+<link rel="stylesheet" href="https://use.typekit.net/sve2obm.css">
+
 <!-- CSS Files -->
 <link rel="stylesheet" href="css/navbar.css" />
 <link rel="stylesheet" href="css/footer.css" />
 <link rel="stylesheet" href="css/login.css" />
 
-<title>Login Page</title>
+<title>Login</title>
 </head>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
@@ -23,15 +35,13 @@ Login page
 	<!-- Login form body -->
 
 	<div class="flexContainer">
-		<div>
-			<img src="media/login_header.jpg" class="login_header_img"
-				alt="Haystack Rock and the Needles at Cannon Beach on the Oregon">
-		</div>
-		<div class="spacer"></div>
+		<div class="spacer" id="bottom">
+		<div class="containContainer">
+		
 		<div class="loginContainer">
 
 			<!-- create login form -->
-			<h1>Welcome back!</h1>
+			<h1>Welcome Back!</h1>
 			<form class="login_form" method="post" action="login_validation.jsp">
 				<div class="error_login">
 					<%
@@ -72,7 +82,11 @@ Login page
 				</p>
 			</form>
 		</div>
+		</div>
+		<div class="spacer" id="belowTxtSpace"></div>
+		<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
+		</div>
 	</div>
-	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
+	
 </body>
 </html>

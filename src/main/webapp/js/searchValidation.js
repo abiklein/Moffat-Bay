@@ -66,7 +66,7 @@ function toggleSubmitButton() {
 	//document.getElementById("submitBtn").style.backgroundColor = "#A9A9A9";
 	}
 	else if(isValid){
-	document.getElementById("submitBtn").className = "form__button";
+	document.getElementById("submitBtn").className = "form_button";
 	 //document.getElementById("submitBtn").style.backgroundColor = "#AA6D23";
 	 //change hover state of button
 	 

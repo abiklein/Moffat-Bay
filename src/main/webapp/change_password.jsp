@@ -9,13 +9,24 @@ CSD 460: Assignment 6
 Change Password Page
  -->
 <head>
-<meta charset="ISO-8859-1">
-<!-- CSS Files -->
-<!-- CSS Files -->
+  <!--Fonts-->
+<!--Poppins-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+	rel="stylesheet">
+<!--P22 Eaglefeather-->
+<link rel="stylesheet" href="https://use.typekit.net/sve2obm.css">
+
+<!--Width = device width with an initial scale of 1.0-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
 <!-- CSS Files -->
 <link rel="stylesheet" href="css/navbar.css" />
 <link rel="stylesheet" href="css/footer.css" />
-<link rel="stylesheet" href="css/login.css" />
+<link rel="stylesheet" href="css/pass.css" />
 
 <title>Change Password</title>
 </head>
@@ -26,63 +37,78 @@ Change Password Page
 	<!-- Login form body -->
 
 	<div class="flexContainer">
-		<div class="col1">
-			<!--  <a href="index.html"><img id="loginImage" src="media/logo_black.png" alt="Moffat Bay Lodge Graphic Logo"/></a>-->
 
-		</div>
-
-		<div class="spacer"></div>
-		<div class="loginContainer">
-
+		<div class="spacer" id="bottom">
+			<div class="passContainer">
 			<!-- create Change Password form -->
 
 			<img src="media/logo_black.png" id="logo" width="200">
-			<form class="change_password_form" method="post"
-				action="change_password_validator.jsp">
-				<h1>Change Password</h1>
-				<div class="error_login">
+			<script type="text/javascript" src="js/changeValidation.js"></script>
+			<form class="change_password_form" name="changeForm" method="post"
+				action="change_password_validator.jsp" oninput="return validateForm()">
+				
+				<h1>Change Password</h1> 
+				
+			<br />
+				
+				<!-- password change form -->
+				<div class="form_message--error" id="errorDiv" style="color: red;">
 					<%
-					//print error message if invalid credentials
-
-					String msg = request.getParameter("msg");
-					if ("Passwords Do Not Match".equals(msg)) {
-					%>
-					<h4>Passwords Do Not Match</h4>
-					<%
-						}
-					if ("User not found".equals(msg)) {
-						%>
-					<h4>
-						Email not found <br> Please Create Account <a
-							class="link_register" href='userRegistration.jsp'> here</a>
-					</h4>
-					<%
-					}					
+						String errorMessage = (String) request.getAttribute("errorMessage");
+					if (errorMessage != null) {
+						out.println(errorMessage);
+					}
 					%>
 				</div>
-				<input id="username" type='email' name='username' size='40'
-					maxlength='75' autofocus placeholder="Email Address" required /><br />
-				<br />
-
-				<div class="psw_change">
-					<p>Password must contain at least:</p>
-					<ul>
-						<li>8 characters</li>
-						<li>1 uppercase letter</li>
-						<li>1 lowercase letter</li>
+				<div class="form_input_group">
+					<p class="input_head">Email<p>
+					<input class="form_input" type="text" name="username" id="username"
+						placeholder="e.g. johnDoe@gmail.com">
+					<div class="form_message--error" id="usernameError"></div>
+				</div>
+				<br/>
+				<br/>
+				<div class="form_input_group">
+					<p class="form_input-terms">Password must contain at least:</p>
+					<ul class="form_input-terms">
+						<li>8 Characters</li>
+						<li>1 Uppercase letter</li>
+						<li>1 Lowercase letter</li>
 					</ul>
+					<input class="form_input" type="password" name="password"
+						id="password" placeholder="Password">
+					<div class="form_message--error" id="pwordError"></div>
 				</div>
-				<input id="password" type='password' name='new_password' size='40'
-					maxlength='75' placeholder=" New Password" required /><br /> <br />
-				<input id="password" type='password' name='conf_password' size='40'
-					maxlength='75' placeholder=" Confirm Password" required /><br />
-				<br />
-				<button id="button" type='submit' name='submit'>Submit</button>
+				<br/>
+				<div class="form_input_group">
+					<input class="form_input" type="password" name="confPassword"
+						id="confPassword" placeholder="Confirm Password">
+					<div class="form_message--error" id="confPwordError"></div>
+				</div>
+				<br/>
+				<button class="form_button" id="submitBtn" type='submit' name='submit'>Submit</button>
 				<br /> <br />
 
 			</form>
+			<script>
+				// Add event listeners to perform validation and enable/disable submit button
+				var form = document.forms["changeForm"];
+				form.addEventListener("input", toggleSubmitButton); // Listen for input changes
+				toggleSubmitButton(); // Initially validate and disable the submit button
 
+				// Function to clear the error message when user starts typing in the email field
+				document.getElementById("username").addEventListener("input",
+						function() {
+							var errorDiv = document.getElementById("errorDiv");
+							errorDiv.innerHTML = ""; // Clear the error message
+						});
+			</script>
+			</div>
+					<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
+			
+			</div>
+			
 		</div>
-		<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
+
 </html>

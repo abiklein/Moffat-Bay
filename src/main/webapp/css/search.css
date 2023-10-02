@@ -1,8 +1,8 @@
 /*
 Silver team: Shayla Bradley, Patrick Ellis, Abigail Klein, Yawa Hallo
-Date: 9-17-23
-CSD 460: Assignment 9
-Reservation Search Page
+Date: 9-03-23
+CSD 460: Assignment 6
+Login Page
 
 Color Theme:
 #004058
@@ -12,78 +12,94 @@ Color Theme:
 @charset "ISO-8859-1";
 
 
-body {
-    font-size: 18px;
-    background-color: #FFF5D3;/* change to this picture background media/lodge.jpg */
-    background-size: cover;
+a{/*remove lines and decorations from all links and set color to #FFF5D3*/
+    text-decoration: none;
+    cursor: pointer;
 }
 
 h1{/*headers set to be display font*/
     font-family: "p22-fllw-eaglefeather", sans-serif;
-    word-spacing:10px;
     color: #AA6D23;
-}
-* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
-    box-sizing: border-box;
-}
-#logo{
-	max-width:200px;
+    padding-top:80px;
+    padding-bottom:20px;
 }
 
-/*Form Section (inputs and the form itself)*/
-.container_form img{
-	 margin: auto;
-    display: block;
-    padding-bottom:20px;
-    padding-top:20px;
+* {/*set box-sizing to border-box so that padding and border are included in elements' total widths and heights.*/
+    box-sizing: border-box;
 }
 .flexContainer{
 	display:flex;
 	flex-direction:column;
 	align-items:center;
+	
 }
 
-.container_form {
-	display: grid;
-    width: 100%;
-    margin: 1rem;
-    padding: 2rem;
-    border-radius: 4px;
-    background: #FFF5D3;
+.spacer{
+	min-height:calc(100vh - 655px);
+	width:100%;
+	max-width:100%;
+	background-color:#FFF5D3;
+	}
+.whiteSpacer{
+	display:none;
 }
 
 .search_form{
-	width:100%;
-	height:60vh;
+	min-width: 200px;
+	width: 80%;
+	max-width: 500px;
 	text-align:center;
 }
-.container_form,
-.form__input,
-.form__button {
+
+.container_form{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    z-index:auto;
+    width:100%;
+    max-width:100%;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align:center;
+    margin-top:40px;
+    padding-bottom:60px;
+}
+
+.form_message--error{
+	color:red;
+	font-style:italic;
+	padding-bottom: 10px;
+	font-size: 14px;
+	text-align:left;
+	
+}
+
+/*Form*/
+.form_input,
+.form_button {
 	font-family: 'Poppins', sans-serif;
     font: 500 1rem;
     
 }
-
-.form > *:first-child {
-    margin-top: 0;
+input{
+	min-width: 100%;
+	height: 50px;
+	font-size:16px;
 }
-
-.form > *:last-child {
-    margin-bottom: 0;
+#button{
+	min-width: 100%;
+	height: 40px;
 }
-
-.form__title {
-	margin-top:3rem;
+.form_title {
     margin-bottom: 2rem;
     text-align: center;
-    font-size:70px;
+    font-size:50px;
 }
 
-.form__input {
+.form_input {
     display: block;
-    width: 100%;
-    max-width:650px;
+    min-width: 100%;
     margin-left:auto;
     margin-right:auto;
     padding: 0.75rem;
@@ -95,26 +111,25 @@ h1{/*headers set to be display font*/
     transition: background 0.2s, border-color 0.2s;
 }
 
-.form__input:focus {
+.form_input:focus {
     border-color: #009579;
     background: #ffffff;
 }
 
-.form__message--error {
+.form_message--error {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 18px;
     color: #cc3333;
 }
 
-.form__input-terms {
+.form_input-terms {
 	margin-top: 0.5rem;
     font-size: 0.85rem;
 }
 
-.form__button {
-    width: 100%;
-    max-width:650px;
+.form_button {
+    min-width: 100%;
     padding: 1rem 2rem;
     margin-top:2rem;
     font-weight: bold;
@@ -128,12 +143,11 @@ h1{/*headers set to be display font*/
     transition:0.5s;
 }
 
-.form__button:hover {
+.form_button:hover {
     background: #004058;
 }
 .form_button_false{
-	width: 100%;
-    max-width:650px;
+	min-width: 100%;
     padding: 1rem 2rem;
     margin-top:2rem;
     font-weight: bold;
@@ -147,24 +161,29 @@ h1{/*headers set to be display font*/
     transition:0.5s;
 }
 
-.form__button:active {
-    transform: scale(0.98);
-}
-
-.form__text {
+.form_text {
     text-align: center;
 }
 
-.form__link {
+.form_link {
     color: #252c6a;
     text-decoration: none;
     cursor: pointer;
 }
 
-.form__link:hover {
+.form_link:hover {
     text-decoration: underline;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
 /*Search Output - the output after clicking the submit button on form*/
@@ -184,13 +203,16 @@ h1{/*headers set to be display font*/
 	padding-top:3rem;
 }
 #noResultsLink{
-	color:#004058;
+	color:#AA6D23;
 }
 #noResultsLink:visited{
-	color:#004058;
+	color:#AA6D23;
 }
 #noResultsLink:hover{
 	text-decoration:underline;
+}
+.noResultsBold{
+	font-weight:700;
 }
 
 #searchOutput{
@@ -207,15 +229,22 @@ h1{/*headers set to be display font*/
 	color: #AA6D23;
 }
 
+
 @media only screen and (max-width: 600px) {
-	.form__title {
-	margin-top:3rem;
-    margin-bottom: 2rem;
-    text-align: center;
+	.form_title {
     font-size:40px;
 	}
-	#container{
-		padding:0px 10px;
-		font-size:16px;
+	.form_message--error {
+    font-size: 	21px;
+	}
+	.form_input{
+		height:60px;
+	}
+	form p{
+		font-size:21px;
+	}
+	input{
+		font-size:18px;
 	}
 }
+

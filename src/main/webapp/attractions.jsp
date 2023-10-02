@@ -38,7 +38,7 @@ Attractions Page
 <link rel="stylesheet" href="css/footer.css" />
 
 <!-- Title of your web page -->
-<title>Moffat Bay Lodge</title>
+<title>Attractions</title>
 </head>
 <body>
 <!-- Navbar. -->

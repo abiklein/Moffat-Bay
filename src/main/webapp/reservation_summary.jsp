@@ -15,7 +15,20 @@ CSD 460: Assignment 8
 Reservation Summary Page
  -->
 <head>
-<meta charset="ISO-8859-1">
+  <!--Fonts-->
+<!--Poppins-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+	rel="stylesheet">
+<!--P22 Eaglefeather-->
+<link rel="stylesheet" href="https://use.typekit.net/sve2obm.css">
+
+<!--Width = device width with an initial scale of 1.0-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
 <!-- CSS Files -->
 <link rel="stylesheet" href="css/navbar.css" />
 <link rel="stylesheet" href="css/footer.css" />
@@ -119,28 +132,32 @@ if (username == null) {
 			<h1>Reservation Summary</h1>
 			<table>
 				<tr>
-					<td>Check-In Date</td>
+					<td class="rowName">Check-In Date</td>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;<%=checkInDate%></td>
 				</tr>
 
 				<tr>
-					<td>Check-Out Date</td>
+					<td class="rowName">Check-Out Date</td>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;<%=checkOutDate%></td>
 				</tr>
 
 				<tr>
-					<td>Room Size</td>
+					<td class="rowName">Room Size</td>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;<%=roomSize%></td>
 				</tr>
 
 				<tr>
-					<td>Number of <br />Guests
+					<td class="rowName">Number of <br />Guests
 					</td>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;<%=numGuests%></td>
 				</tr>
 
 				<tr>
-					<td>Total</td>
+					<td class="rowName">Total Nights</td>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;<%=totalNights%></td>
+				</tr>
+				<tr>
+					<td class="rowName">Total Cost</td>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;<%=printTotalPrice%></td>
 				</tr>
 
@@ -148,7 +165,7 @@ if (username == null) {
 			<br />
 
 			<p>Please review reservation before submitting.</p>
-			<p>Cancel to return to reservation page</p>
+			<p>Cancel to return to reservation page.</p>
 			<br /> 
 			<input type="hidden" name="checkInDate" value="<%=checkInDate%>">
 			<input type="hidden" name="checkOutDate" value="<%=checkOutDate%>">
@@ -156,9 +173,10 @@ if (username == null) {
 			<input type="hidden" name="numGuests" value="<%=numGuests%>">
 			<input type="hidden" name="totalNights" value="<%=totalNights%>">
 			<input type="hidden" name="totalCost"
-				value="<%=totalNights * roomCost%>"> <input id="submit"
+				value="<%=totalNights * roomCost%>"> 
+			<input id="submit"
 				name="submit" type="submit" value="Submit"
-				formaction="reservation_summary_validator.jsp"> <input
+				formaction="reservation_summary_validator.jsp"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input 
 				id="cancel" name="cancel" type="submit" value="Cancel"
 				formaction="reservation.jsp"><br />
 			<br />

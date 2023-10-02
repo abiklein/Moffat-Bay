@@ -35,7 +35,7 @@ try {
 
     if (rs.next()) {
         // Email already exists, set an error message
-        request.setAttribute("errorMessage", "Email already exists. Try logging into your account <a href=\"login.jsp\">here<a>.");
+        request.setAttribute("errorMessage", "Email already exists. Try logging into your account <a class='input_head_link' href=\"login.jsp\">here.<a>");
         // Forward the request back to the registration page
         request.getRequestDispatcher("registration.jsp").forward(request, response);
     } else {    	

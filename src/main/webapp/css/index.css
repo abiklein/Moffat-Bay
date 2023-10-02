@@ -17,9 +17,9 @@ html{/*apply font to entire html page*/
   font-family: 'Poppins', sans-serif;
 }
 img{
-  max-width:100%;
+	max-width:100%;
 }
-.img{
+.img{	
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ h1{/*headers set to be display font*/
 .landing {
   position:relative;
   max-width:100%;
-  max-height:130vh;
+  max-height:110vh;
   overflow:hidden;
   text-align:center;
   background: url("/media/lodge.jpg") no-repeat;
@@ -82,6 +82,10 @@ h1{/*headers set to be display font*/
   text-align: left;
   padding-left: 50px;
 }
+ #landImg{
+ 	min-width:100vw;
+ 	min-height:115vh;
+  }
 #luxury{
   font-size:60px;
   font-family: 'Dancing Script', cursive;
@@ -165,7 +169,7 @@ h1{/*headers set to be display font*/
 
 /* For phones: */
 @media only screen and (max-width: 600px) {
-  img{
+  .img img{
     width:400px;
   }
   .flexContainer{
@@ -182,35 +186,36 @@ h1{/*headers set to be display font*/
     display:none;
   }
   #landImg{
-    transform: translate(0,0);
-    max-width:900%;
-    width:1000px;
+    height:100vh;
+    object-fit: cover;
   }
   .landing{
     max-width:100%;
-    max-height:500px;
+    height:100vh;
     overflow:hidden;
   }
   .landCover{
-    padding-top: 30px;
-    align-items: self-start;
+    top: 15vh;
     flex-direction:column;
     z-index: 50;
     position: absolute;
+    left:-50px;
     color: white;
-    font-size: 24px;
   }
   #landLogo{
     display:none;
   }
   #landText {
-    font-size: 30px;
     text-align: left;
-    padding-left: 0;
+    left: 0px;
+  }
+  .landCover p, #luxury, #adventure, #you{
+  	font-size: inherit;
   }
   #reserveBtn{
     display: block;
     margin-top: 30px;
+    font-size:18px;
   }
 }
 
@@ -233,13 +238,12 @@ h1{/*headers set to be display font*/
     display:none;
   }
   #landImg{
-    transform: translate(0,0);
-    max-width:300%;
-    width:1000px;
+    width:100vw;
+    max-height:115vh;
   }
   .landing{
     max-width:100%;
-    max-height:500px;
+    height:100vh;
     overflow:hidden;
   }
   .landCover{
@@ -262,5 +266,6 @@ h1{/*headers set to be display font*/
   #reserveBtn{
     display: block;
     margin-top: 30px;
+    font-size:16px;
   }
 }

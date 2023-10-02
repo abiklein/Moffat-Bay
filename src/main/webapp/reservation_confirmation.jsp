@@ -15,13 +15,26 @@ CSD 460: Assignment 8
 Reservation Confirmation Page
  -->
 <head>
-<meta charset="ISO-8859-1">
+  <!--Fonts-->
+<!--Poppins-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+	rel="stylesheet">
+<!--P22 Eaglefeather-->
+<link rel="stylesheet" href="https://use.typekit.net/sve2obm.css">
+
+<!--Width = device width with an initial scale of 1.0-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
 <!-- CSS Files -->
 <link rel="stylesheet" href="css/navbar.css" />
 <link rel="stylesheet" href="css/footer.css" />
-<link rel="stylesheet" href="css/reservation_summary.css" />
+<link rel="stylesheet" href="css/pass.css" />
 
-<title>Moffat Bay Lodge Reservation Confirmation</title>
+<title>Reservation Confirmation</title>
 </head>
 <%
 //check if user is logged in
@@ -34,10 +47,9 @@ if (username == null) {
 %>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
-	<br />
-	<br />
-
-	<div align="center" class="reservation_summary">
+	<div class="flexContainer">
+	<div class="spacer" id="bottom">
+	<div class="passContainer">
 		<%
 			//MySQL database connection
 		String jdbcURL = "jdbc:mysql://localhost:3306/moffat_lodge";
@@ -63,22 +75,26 @@ if (username == null) {
 			e.printStackTrace();
 		}
 		%>
-		<img src="media/logo_black.png" id="logo" width="200"><br /> <br />
+		<img src="media/logo_black.png" id="logo" width="200"><br /> 
+		
+		<h1>Reservation Confirmation</h1>
+		
 		<p>
-			Thank you for booking <br />your stay with us!
+			Thank you for booking your stay with us!
 		</p>
 		<br /> <br />
 		<p id="reservation id">
-			Your reservation number is :
+			Your reservation ID is :
 			<%=lastId%>
 		</p>
 		<br /> <br />
 		<p>
-			<a class="back_to_home" href="index.jsp">Back to Home</a>
+			<a class="link_register" href="index.jsp">Back to Home</a>
 		</p>
 	</div>
-	<br />
-	<br />
+	</div>
+	</div>
+	<div class="spacer"></div>
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>

@@ -21,7 +21,7 @@ About page
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!--Width = device width with an initial scale of 1.0-->
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
   <meta charset="UTF-8">
 
   <!-- CSS Files -->
@@ -37,17 +37,18 @@ About page
 <div class="flexContainer">
   <div class="landing">
     <div class="landImgContainer">
-      <div id="landImg"><img src="media/about.jpg" alt="Photo of Moffat Bay Lodge"></div>
+      <div id="landImg"><img src="media/about.jpg" alt="Photo of Moffat Bay Lodge" class="landing-image"></div>
     </div>
     <div class="landIntroContainer">
+    
       <div id="introShape">
+      <div class="shape"></div>
         <h1>Hello</h1>
         <p>Here at Moffat Lodge, we value family and are
           determined to treat whoever walks through our doors
           with the same love and sincerity. We aspire to express
           the extent of our purpose through our many services.</p>
       </div>
-      <div class="shape"></div>
     </div>
   </div>
 
@@ -82,11 +83,7 @@ About page
   </div>
 
   <div class="accommodations">
-    <div class="accomImg">
-      <div class="singleImg"><img id="roomOne" alt="room one" src="media/room1.jpg"></div>
-      <div class="singleImg"><img id="roomTwo" alt="room two" src="media/room2.jpg"></div>
-      <div class="singleImg"><img id="roomThree" alt="room three" src="media/room3.jpg"></div>
-    </div>
+    <div class="accomImg"></div>
     <div class="accomTxt">
       <h1>Accommodations</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

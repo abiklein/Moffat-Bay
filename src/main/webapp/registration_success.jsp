@@ -26,40 +26,55 @@ Registration success page
 <meta charset="UTF-8">
 
 <!-- CSS Files -->
-<link rel="stylesheet" href="css/index.css" />
 <link rel="stylesheet" href="css/navbar.css" />
 <link rel="stylesheet" href="css/footer.css" />
-<link rel="stylesheet" href="css/registration.css" />
+<link rel="stylesheet" href="css/pass.css" />
 
 <!-- Title of your web page -->
-<title>Moffat Bay Lodge Registration Success</title>
+<title>Success! Registration</title>
 
 <script>
-	// Function to redirect to another page after a specified time (in milliseconds)
-	function redirectToPage() {
-		setTimeout(function() {
-			window.location.href = "login.jsp"; // Replace with the actual target page URL
-		}, 9000); // NOT - 3000 milliseconds (3 seconds) delay before redirection
-	}
+//Function to redirect to another page after 10 seconds
+var time = 0;
 
-	// Call the redirect function when the page loads
-	window.onload = redirectToPage;
+function myTimer() {
+	  var tt = setInterval(function() {
+	    var counter = 10 - time;
+	    document.getElementById("time").innerHTML = counter;
+	    time = time + 1;
+	    if (counter === 0) {
+	      clearInterval(tt);
+	      window.location.href = "login.jsp";
+	    }
+	  }, 1000);
+};
+
+// Call the redirect function when the page loads
+window.onload = myTimer;
 </script>
 </head>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
 	<!--Body of web page-->
 	<div class="flexContainer">
-		<div class="container_form">
-			<img src="media/logo_black.png" id="logo" width="200">
-			<h1 class="form__title">Thank you for registering!</h1>
-
-			<p class="form__input-terms">Please login using your credentials</p>
-			<p class="form__input-terms">
-				If this page does not automatically direct you, please click <a
-					href="login.jsp">here.</a>
+	<div class="spacer" id="bottom">
+	<div class="passContainer">
+		<img src="media/logo_black.png" id="logo" width="200">
+		<div class="password_container">
+			<h1>Thank you for registering!</h1>
+			<br />
+			<p>Please login using your credentials</p>
+			<br />
+			<p>
+				If this page doesn't automatically direct you in  <span id="time"></span> seconds, please click <a 
+				id="login_link" href="login.jsp">here</a>.
 			</p>
+			<br />
+			<br />
 		</div>
+		</div>
+		</div>
+		
 	</div>
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
