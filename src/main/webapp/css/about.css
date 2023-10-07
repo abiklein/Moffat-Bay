@@ -59,7 +59,7 @@ h1{/*headers set to be display font*/
 }
 .landImgContainer{
   max-width:65%;
-  overflow: hidden;
+  overflow: hidden;  
 }
 /*Uses object fit.*/
 .landing-image {
@@ -81,7 +81,8 @@ h1{/*headers set to be display font*/
   max-width:35%;
   height:100vh;
   background-color:#004058;
-}
+  box-shadow: inset 5px 5px 40px 0px rgba(0, 45, 62, 1), inset -5px -5px 40px 0px rgba(0, 45, 62, 1);
+ }
 .landIntroContainer p{
   padding: 0px 50px 0px 50px;
   text-align: left;
@@ -119,6 +120,7 @@ h1{/*headers set to be display font*/
   flex-direction: column;
   width: 100vw;
   background-color: #AA6D23;
+  box-shadow: inset 5px 5px 40px 0px rgba(119, 76, 25, 1), inset -5px -5px 40px 0px rgba(119, 76, 25, 1);
   text-align: left;
   align-items: center;
 }
@@ -157,6 +159,8 @@ h1{/*headers set to be display font*/
 .accomTxt{
   width: 60%;
   text-align: left;
+  background-color:#FFF5D3;
+  box-shadow: inset 5px 5px 50px 0px rgba(179, 172, 148, 1), inset -5px -5px 50px 0px rgba(179, 172, 148, 1);
 }
 .accomTxt h1{
   font-size: 50px;
@@ -167,7 +171,8 @@ h1{/*headers set to be display font*/
 }
 
 .accomTxt p{
-  padding:30px 70px 0 70px;
+	color: #004058;
+  padding:30px 70px 30px 70px;
 
 }
 

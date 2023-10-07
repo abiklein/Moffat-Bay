@@ -32,7 +32,7 @@ Reservation Confirmation Page
 <!-- CSS Files -->
 <link rel="stylesheet" href="css/navbar.css" />
 <link rel="stylesheet" href="css/footer.css" />
-<link rel="stylesheet" href="css/pass.css" />
+<link rel="stylesheet" href="css/reservation_summary.css" />
 
 <title>Reservation Confirmation</title>
 </head>
@@ -47,9 +47,13 @@ if (username == null) {
 %>
 <body>
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
-	<div class="flexContainer">
-	<div class="spacer" id="bottom">
-	<div class="passContainer">
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<div align="center" class="reservation_summary">
 		<%
 			//MySQL database connection
 		String jdbcURL = "jdbc:mysql://localhost:3306/moffat_lodge";
@@ -89,12 +93,13 @@ if (username == null) {
 		</p>
 		<br /> <br />
 		<p>
-			<a class="link_register" href="index.jsp">Back to Home</a>
+			<a class="back_to_home" href="index.jsp">Back to Home</a>
 		</p>
 	</div>
-	</div>
-	</div>
 	<div class="spacer"></div>
+	<br />
+	<br />
+	<br />
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>

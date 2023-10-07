@@ -62,8 +62,8 @@ index/landing page
 		</div>
 		<div class="txt" id="aboutUs">
 			<h1>About Us</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Discover what makes our establishment truly special. Explore the array of amenities that 
+			will enhance your stay and the diverse range of rooms designed to cater to your comfort.</p>
 			<div class="learnMore">
 				<a href="about.jsp">Learn More</a>
 			</div>
@@ -76,8 +76,9 @@ index/landing page
 		</div>
 		<div class="txt" id="attractions">
 			<h1>Attractions</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Learn about the endless adventures awaiting you at the Lodge, where kayaking, hiking, 
+			whale watching, and scuba diving come together to create unforgettable experiences. 
+			Plan your perfect adventure with us.</p>
 			<div class="learnMore" id="attractLearnMore">
 				<a href="attractions.jsp">Learn More</a>
 			</div>

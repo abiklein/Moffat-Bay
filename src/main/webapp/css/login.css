@@ -12,19 +12,21 @@ Color Theme:
 @charset "ISO-8859-1";
 
 
+body{
+	background-image: url("../media/loginBackground.jpg");
+	background-size: cover; /* or 'contain' for different scaling options */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  height: 100vh; /* Sets the body height to 100% of the viewport height */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
 a{/*remove lines and decorations from all links and set color to #FFF5D3*/
     text-decoration: none;
     cursor: pointer;
 }
-html{
-	background-image: url("../media/loginBackground.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-html,body{
-	min-height:100%;
-}
+
 
 h1{/*headers set to be display font*/
     font-family: "p22-fllw-eaglefeather", sans-serif;
@@ -42,34 +44,29 @@ h1{/*headers set to be display font*/
 	align-items:center;
 }
 
-#belowTxtSpace{
+.spacer{
 	height:100px;
 }
-#bottom{
-	min-height:calc(100vh - 655px);
-	width:100%;
-	max-width:100%;
-	}
-.containContainer{
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-	width:100%;
-}
+
 .loginContainer{
 	width:400px;
 	background: rgba(170, 109, 35, 0.8);
+	border: 1px solid rgba(170, 109, 35, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     display: flex;
     flex-wrap:wrap;
     z-index:auto;
-    margin:25vh 0;
+    margin:20px 0 25vh 0;
     padding:20px;
     flex-direction:column;
     align-items:center;
     justify-content: center;
 
 }
+
+
 .link_register{
 	color:#FFF5D3 !important;
 }
@@ -165,8 +162,7 @@ font-style: normal;}
 }
 #logo{
 	text-align:center;
-	left: 50%;
-	margin-left: 400px
+
 }
 .confirm_reservation{
 	display:flex;

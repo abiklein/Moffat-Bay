@@ -140,7 +140,7 @@ h1{/*headers set to be display font*/
 #hike{
   background-color:#FFF5D3;
   color: #AA6D23;
-  
+  box-shadow: inset 5px 5px 50px 0px rgba(179, 172, 148, 1), inset -5px -5px 50px 0px rgba(179, 172, 148, 1);
 }
 #hike p{
   color: #004058;
@@ -150,6 +150,7 @@ h1{/*headers set to be display font*/
 #kayak{
   background-color:#004058;
   color: #AA6D23;
+  box-shadow: inset 5px 5px 40px 0px rgba(0, 45, 62, 1), inset -5px -5px 40px 0px rgba(0, 45, 62, 1);
 }
 #kayak h1{
   color:#FFF5D3;
@@ -164,6 +165,7 @@ h1{/*headers set to be display font*/
 #scuba{
   background-color:#FFF5D3;
   color: #AA6D23;
+  box-shadow: inset 5px 5px 50px 0px rgba(179, 172, 148, 1), inset -5px -5px 50px 0px rgba(179, 172, 148, 1);
 }
 #scuba p{
   color: #004058;
@@ -181,6 +183,7 @@ h1{/*headers set to be display font*/
 #whale{
   background-color:#004058;
   color: #AA6D23;
+  box-shadow: inset 5px 5px 40px 0px rgba(0, 45, 62, 1), inset -5px -5px 40px 0px rgba(0, 45, 62, 1);
 }
 #whale h1{
   color:#FFF5D3;

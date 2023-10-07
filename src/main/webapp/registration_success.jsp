@@ -57,25 +57,23 @@ window.onload = myTimer;
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
 	<!--Body of web page-->
 	<div class="flexContainer">
-	<div class="spacer" id="bottom">
+	<div class="spacer"></div>
 	<div class="passContainer">
-		<img src="media/logo_black.png" id="logo" width="200">
+		<img src="media/logo_white.png" id="logo" width="200"><br />
 		<div class="password_container">
 			<h1>Thank you for registering!</h1>
 			<br />
-			<p>Please login using your credentials</p>
-			<br />
-			<p>
-				If this page doesn't automatically direct you in  <span id="time"></span> seconds, please click <a 
-				id="login_link" href="login.jsp">here</a>.
-			</p>
-			<br />
-			<br />
+
+		<p>Please login using your new credential.</p>
+		<br />
+		<p>If this page doesn't automatically direct you in</p>
+		<p><span id="time"></span> seconds,</p>
+		<p>please click <a id="login_link" href="login.jsp">here</a>.</p>
 		</div>
 		</div>
 		</div>
+		<div class="spacer"></div>
 		
-	</div>
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 </body>
 </html>

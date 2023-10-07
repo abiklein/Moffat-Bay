@@ -38,7 +38,7 @@ Registration Page
 			<img src="media/logo_white.png" id="logo" width="200">
 			<script type="text/javascript" src="js/registrationValidation.js"></script>
 			<!-- create login form -->
-			<h1>Registration Form</h1>
+			<h1>Registration</h1>
 			<form class="login_form" name="registrationForm"
 				action="registration_input.jsp" method="post"
 				oninput="return validateForm()">

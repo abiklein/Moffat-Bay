@@ -57,11 +57,11 @@ failed password change page
 
 <!-- Navbar. -->
 	<div class="nav"><jsp:include page="navbar.jsp" flush="true" /></div>
-	
+	<div class="spacer"></div>	
 	<div class="flexContainer">
-	<div class="spacer" id="bottom">
+	<div class="spacer"></div>
 	<div class="passContainer">
-	<img src="media/logo_black.png" id="success_password_change_logo" width="200"><br />
+	<img src="media/logo_white.png" id="logo" width="200"><br />
 
 	<div class="password_container">
 		<h1>Failed to Change Password</h1>
@@ -71,16 +71,15 @@ failed password change page
 			requirements are met.
 		</p>
 		<br />
-		<p>
-			If this page doesn't automatically direct you in  <span id="time"></span> seconds, please click <a 
-				id="login_link" href="change_password.jsp">here</a>.
-		</p>
-		<br />
-		<br />
+		<p>If this page doesn't automatically direct you in</p>
+		<p><span id="time"></span> seconds,</p>
+		<p>please click <a id="login_link" href="change_password.jsp">here</a>.</p>
+
 	</div>
 	</div>
 	</div>
-	</div>
+	<div class="spacer"></div>
+	
 	<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
 
 </body>
