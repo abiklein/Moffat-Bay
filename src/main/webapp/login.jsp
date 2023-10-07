@@ -35,13 +35,12 @@ Login page
 	<!-- Login form body -->
 
 	<div class="flexContainer">
-		<div class="spacer" id="bottom">
-		<div class="containContainer">
-		
+		<div class="spacer"></div>
 		<div class="loginContainer">
 
 			<!-- create login form -->
-			<h1>Welcome Back!</h1>
+			<img src="media/logo_white.png" id="logo" width="200">
+			<h1>Welcome</h1>
 			<form class="login_form" method="post" action="login_validation.jsp">
 				<div class="error_login">
 					<%
@@ -66,7 +65,7 @@ Login page
 					%>
 				</div>
 				<br /> <input id="username" type='email' name='username' size='40'
-					maxlength='75' autofocus placeholder="Email Address" required /><br />
+					maxlength='75' placeholder="Email Address" required /><br />
 				<br /> <input id="password" type='password' name='password'
 					size='40' maxlength='75' placeholder="Password" required /><br />
 				<br />
@@ -83,10 +82,7 @@ Login page
 			</form>
 		</div>
 		</div>
-		<div class="spacer" id="belowTxtSpace"></div>
-		<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
-		</div>
-	</div>
-	
+		<div class="spacer"></div>
+		<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>	
 </body>
 </html>

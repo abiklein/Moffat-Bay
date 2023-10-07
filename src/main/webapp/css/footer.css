@@ -64,10 +64,29 @@ ul{
 }
 
 
-/* For tablets: */
+/* For tablets and smaller screens: */
 @media only screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        text-align: center; /* Center align the content within the footer */
+    }
 
-	.footer{flex-direction: column};
+    /* Center the image by removing its right alignment and setting a margin */
+    .col1 {
+        width: 100%; /* Take up the full width of the footer */
+        text-align: center; /* Center the content */
+    }
+    
+    .col2, .col3, .col4, .col5 {
+    display: none;
+    }
+
+    #footImage {
+        width: 50px; /* Adjust the image size as needed */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+
+    /* You may need to adjust other styles as needed for mobile view */
 }
 
 /* For desktop: */

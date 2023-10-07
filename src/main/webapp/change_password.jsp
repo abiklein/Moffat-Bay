@@ -37,12 +37,11 @@ Change Password Page
 	<!-- Login form body -->
 
 	<div class="flexContainer">
-
-		<div class="spacer" id="bottom">
+		<div class="spacer"></div>
 			<div class="passContainer">
 			<!-- create Change Password form -->
 
-			<img src="media/logo_black.png" id="logo" width="200">
+			<img src="media/logo_white.png" id="logo" width="200">
 			<script type="text/javascript" src="js/changeValidation.js"></script>
 			<form class="change_password_form" name="changeForm" method="post"
 				action="change_password_validator.jsp" oninput="return validateForm()">
@@ -52,9 +51,9 @@ Change Password Page
 			<br />
 				
 				<!-- password change form -->
-				<div class="form_message--error" id="errorDiv" style="color: red;">
+				<div class="form_message--error" id="errorDiv">
 					<%
-						String errorMessage = (String) request.getAttribute("errorMessage");
+						String errorMessage = request.getParameter("msg");
 					if (errorMessage != null) {
 						out.println(errorMessage);
 					}
@@ -103,12 +102,11 @@ Change Password Page
 							errorDiv.innerHTML = ""; // Clear the error message
 						});
 			</script>
+			</div>			
 			</div>
-					<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
-			
-			</div>
-			
-		</div>
+			<div class="spacer"></div>
+			<div class="footer"><jsp:include page="footer.jsp" flush="true" /></div>
+
 </body>
 
 </html>

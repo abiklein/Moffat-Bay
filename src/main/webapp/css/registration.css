@@ -11,12 +11,17 @@ Color Theme:
  */ 
 @charset "ISO-8859-1";
 
-html{
+body{
 	background-image: url("../media/loginBackground.jpg");
+	background-size: cover; /* or 'contain' for different scaling options */
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  height: 100vh; /* Sets the body height to 100% of the viewport height */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
 }
+
+
 a{/*remove lines and decorations from all links and set color to #FFF5D3*/
     text-decoration: none;
     cursor: pointer;
@@ -45,16 +50,18 @@ h1{/*headers set to be display font*/
 .registerContainer{
     width:400px;
 	background: rgba(170, 109, 35, 0.8);
+	border: 1px solid rgba(170, 109, 35, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     display: flex;
     flex-wrap:wrap;
     z-index:auto;
-    margin: 20px 0 25vh 0;
+    margin:20px 0 25vh 0;
     padding:20px;
     flex-direction:column;
     align-items:center;
     justify-content: center;
-
 }
 
 .login_form input{

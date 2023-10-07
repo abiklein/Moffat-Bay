@@ -82,7 +82,7 @@ if (username == null) {
 	<a class="rightNav" href="about.jsp">About Us</a>
 	<div class="account rightNav">
 		<button class="dropbtn">
-			Account <img class="dropIcon" src="media/drop_icon.png"	alt="drop down icon" /> <i class="fa fa-caret-down"></i>
+			<%=firstName %> <%=lastName %> <img class="dropIcon" src="media/drop_icon.png"	alt="drop down icon" /> <i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-content">
 			<a class="drop1" href="logout.jsp">Logout</a> 

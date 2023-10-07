@@ -51,6 +51,9 @@ if (username == null) {
 	<br />
 	<br />
 	<br />
+	<br />
+	<br />
+	<br />
 	<%
 		// Get reservation data from request parameters (user input from reservation page)
 		

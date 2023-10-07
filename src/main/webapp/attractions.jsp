@@ -56,8 +56,9 @@ Attractions Page
 	<div class="flexContainer">
 	<div class="txt" id="kayak">
 			<h1>Kayaking</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Experience thrilling kayaking adventures on scenic Joviedsa Island with the Lodge 
+			as your gateway to pristine waterways. From tranquil lakes to coastal thrills, we offer 
+			guided tours and equipment for all levels of kayakers.</p>
 		</div>
 		<div class="img" id="kayakFlexImg">
 			<img id="kayakImg" src="media/kayak.jpg" alt="Kayaking Photo" />
@@ -69,14 +70,18 @@ Attractions Page
 		
 		<div class="txt" id="hike">
 			<h1>Hiking</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Explore Joviedsa Island's wilderness in the Lodge's backyard. Whether 
+			you're a novice or seasoned hiker, our trails lead through ancient forests, stunning 
+			peaks, and hidden waterfalls. Get trail support from our staff and immerse yourself 
+			in Pacific Northwest beauty.</p>
 		</div>
 		<div class="reverse">
 			<div class="txt" id="whale">
 				<h1>Whale Watching</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Witness the majestic gray whales and marine life from scenic viewpoints or guided tours. 
+				Our coastal lodge allows you to immerse yourself with unforgettable sightings 
+				whether you're on our ocean-view deck or a boat tour. Experience the magic of 
+				whale watching on Joviedsa Island's Pacific shores with us.</p>
 			</div>
 			<div class="img" id="whaleFlexImg">
 				<img id="whaleImg" src="media/whale3.jpg" alt="Whale Watching Photo" />
@@ -87,8 +92,9 @@ Attractions Page
 		</div>
 		<div class="txt" id="scuba">
 			<h1>Scuba Diving</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-				do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Just off the shores of the Lodge you can dive into Joviedsa Island's underwater wonders. Explore 
+			captivating dive sites, kelp forests, and vibrant marine life in the Pacific Ocean. Our 
+			experienced instructors offer courses and guided excursions for divers of all levels. </p>
 		</div>
 	</div>
 	<!-- Footer. -->

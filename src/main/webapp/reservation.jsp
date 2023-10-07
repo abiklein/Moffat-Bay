@@ -42,6 +42,13 @@ if (username == null) {
 } else {
 	// User is logged in, display the protected content
 %>
+<script>
+// Initialize the minimum check-out date when the page loads.
+window.onload = function() {
+    updateCheckOutOptions();
+};
+</script>
+
 </head>
 
 <body>
@@ -55,25 +62,36 @@ if (username == null) {
 		<div class="containContainer">
 
 	<div class="reservation_form">
-	<img src="media/logo_black.png" id="logo" width="200">
-	<h1>Lodge Reservation</h1>
+	<h1 class="form_title">Lodge Reservation</h1>
 		<!-- Reservation Form. -->
 		<form id="reservation" action="reservation_summary.jsp" method="post">
+			
 			<!-- Check in Date. -->
-			<!-- Check in date can only be selected from the current date in session up until a year from then. -->
-			<label for="checkin">Check-In Date:</label> <input type="date"
-				id="checkin" name="checkin" required
-				min="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>"
-				max="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(java.util.Date.from(java.time.LocalDate.now().plusYears(1).atStartOfDay(java.time.ZoneId.systemDefault()).toInstant())) %>">
+			<label for="checkin">Check-In Date:</label>
+			<input type="date" id="checkin" name="checkin" required
+			min="<%=new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date())%>"
+			max="<%=java.time.LocalDate.now().plusYears(1)%>"
+				onchange="updateCheckOutOptions()">
 
 			<!-- Check out Date. -->
-			<!-- Check out date can only be selected a day after the current date in session up until a year from then. -->
-			<label for="checkout">Check-Out Date:</label> <input type="date"
-				id="checkout" name="checkout" required
-				min="<%= java.util.Date.from(java.time.LocalDate.now().plusDays(1).atStartOfDay(java.time.ZoneId.systemDefault()).toInstant()) %>"
-				max="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(java.util.Date.from(java.time.LocalDate.now().plusYears(1).atStartOfDay(java.time.ZoneId.systemDefault()).toInstant())) %>">
+			<label for="checkout">Check-Out Date:</label> 
+			<input type="date" id="checkout" name="checkout" required
+			min="<%= java.time.LocalDate.now().plusDays(1) %>"
+    		max="<%= java.time.LocalDate.now().plusYears(1) %>">
 
-			<!-- Room Size. -->
+			<script>
+			function updateCheckOutOptions() {
+			    var checkinDate = new Date(document.getElementById('checkin').value);
+			    var minCheckoutDate = new Date(checkinDate);
+			    minCheckoutDate.setDate(checkinDate.getDate() + 1);
+			
+			    var checkoutInput = document.getElementById('checkout');
+			    checkoutInput.min = minCheckoutDate.toISOString().split('T')[0];
+			}
+			</script>
+
+	
+		<!-- Room Size. -->
 			<label for="roomSize">Room Size:</label><br/> <select id="roomSize"
 				name="roomSize" required>
 				<option value="Double Full Beds">Double Full Beds: $115.50/Night</option>
@@ -109,49 +127,46 @@ if (username == null) {
 	</div>
 	
 
-	<!-- Javascript handles + and - buttons. -->
+	<!-- Javascript -->
 	<script>
-	
-		// Variables for date inputs.
-    	const checkinInput = document.getElementById("checkin");
-    	const checkoutInput = document.getElementById("checkout");
+    // Variables for date inputs.
+    const checkinInput = document.getElementById("checkin");
+    const checkoutInput = document.getElementById("checkout");
 
-    	// Get the current date.
-    	const currentDate = new Date();
+    // Get the current date.
+    const currentDate = new Date();
 
-    	// Set the minimum date for check-in to the current date.
-    	checkinInput.min = currentDate.toISOString().split('T')[0];
+    // Set the minimum date for check-in to the current date.
+    checkinInput.min = currentDate.toISOString().split('T')[0];
 
-    	// Event listener for checkin date change.
-    	checkinInput.addEventListener("change", () => {
-        	const checkinDate = new Date(checkinInput.value);
-        	const checkoutDate = new Date(checkoutInput.value);
+    // Event listener for checkin date change.
+    checkinInput.addEventListener("change", () => {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
 
-        	// Check if check-out date is before check-in date, and display an error message if it is.
-        	if (checkoutDate <= checkinDate) {
-            	alert("Check-out date cannot be before or on check-in date.");
-            	checkoutInput.value = ""; // Clear the check-out date input.
-        	}
-    	});
+        // Check if check-out date is before check-in date, and display an error message if it is.
+        if (checkoutDate <= checkinDate) {
+            alert("Check-out date cannot be before or on check-in date.");
+            checkoutInput.value = ""; // Clear the check-out date input.
+        }
+    });
 
-    	// Event listener for checkout date change.
-    	checkoutInput.addEventListener("change", () => {
-        	const checkinDate = new Date(checkinInput.value);
-        	const checkoutDate = new Date(checkoutInput.value);
-        	const checkDate = checkinDate + 1;
-        	// Check if check-in date is before the current date, and display an error message if it is.
-        	if (checkDate <= currentDate) {
-            	alert("Check-in date cannot be before the current date.");
-            	checkinInput.value = ""; // Clear the check-in date input.
-        	}
+    // Event listener for checkout date change.
+    checkoutInput.addEventListener("change", () => {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
 
-        	// Check if check-out date is before check-in date, and display an error message if it is.
-        	if (checkoutDate <= checkinDate) {
-            	alert("Check-out date cannot be before or on check-in date.");
-            	checkoutInput.value = ""; // Clear the check-out date input.
-        	}
-    	});
-    </script>
+        // Check if check-out date is before check-in date, and display an error message if it is.
+        if (checkoutDate <= checkinDate) {
+            alert("Check-out date cannot be before or on check-in date.");
+            checkoutInput.value = ""; // Clear the check-out date input.
+        } else {
+            // If the checkout date is valid, update the minimum check-out date.
+            setMinCheckOutDate();
+        }
+    });    
+</script>
+
 </div>
 	</div>
 	</div>

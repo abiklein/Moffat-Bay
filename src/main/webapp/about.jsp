@@ -55,30 +55,42 @@ About page
   <div class="amenities">
     <h1>Amenities</h1>
     <div id="amenityList">
+      
+      <div>
+        <ul>       
+          <li>Comfortable Accommodations</li>
+          <li>Sports and Recreation</li>
+          <li>Swimming Pool</li>
+          <li>Hiking and Nature Trails</li>          
+        </ul>
+      </div>
+      
+      <div>
+        <ul>
+          <li>Outdoor Spaces</li>
+          <li>Concierge Services</li>
+          <li>Entertainment</li>
+          <li>Conference and Meeting Facilities</li>                             
+        </ul>
+      </div>
+     
       <div>
       <ul>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
+      	<li>Restaurant and Dining Facilities</li>
+        <li>Spa and Wellness Center</li>      
+        <li>Lounge or Bar</li>
+        <li>Gift Shop or Boutiqu.</li>        
       </ul>
       </div>
+      
       <div>
         <ul>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Kid's Play Area</li>
+          <li>Accessibility Features</li>
+          <li>Shuttle Service</li>
+          <li>Campfire or BBQ Areas</li> 
         </ul>
-      </div>
-      <div>
-        <ul>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
-      </div>
+      </div>      
     </div>
   </div>
 
@@ -86,22 +98,24 @@ About page
     <div class="accomImg"></div>
     <div class="accomTxt">
       <h1>Accommodations</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Nisi vitae suscipit tellus mauris a diam maecenas sed. Nec feugiat nisl pretium fusce id. Pretium
-        nibh ipsum consequat nisl vel pretium lectus. Faucibus pulvinar elementum integer enim neque volutpat ac
-        tincidunt. Integer vitae justo eget magna fermentum iaculis. Egestas erat imperdiet sed euismod nisi porta lorem
-        mollis.
+      <p><b>Double Full Beds Room:</b> Ideal for families or friends, our Double Full Beds Room offers two comfortable full-sized beds. 
+      Enjoy the convenience of a microwave for quick snacks, a safe for your valuables, and a spacious bathroom with a shower, 
+      ensuring a relaxing stay for all.
 
-        <br><br>Velit egestas dui id ornare arcu odio ut sem nulla. Eu scelerisque felis imperdiet proin fermentum leo
-        vel orci porta. Viverra aliquet eget sit amet tellus. Habitant morbi tristique senectus et netus et malesuada.
-        Nulla facilisi etiam dignissim diam quis enim lobortis. Cursus turpis massa tincidunt dui ut ornare lectus sit
-        amet.
+        <br><br><b>Queen Bed Room:</b> Perfect for couples or solo travelers, our Queen Bed Room features a plush queen-sized bed. 
+        You'll find a microwave for your convenience, a safe for your peace of mind, and a well-appointed bathroom with a shower
+         to freshen up after a day of exploration.
 
-        <br><br>Cum sociis natoque penatibus et magnis. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing.
-        Nibh sit amet commodo nulla facilisi nullam. Nisi vitae suscipit tellus mauris a diam maecenas sed. Consectetur
-        a erat nam at. Amet risus nullam eget felis eget nunc lobortis mattis.
+        <br><br><b>Double Queen Beds Room:</b> Designed for larger groups or those who desire extra space, our Double Queen Beds Room provides 
+        two queen-sized beds. In addition to the microwave and safe, you'll have a generous bathroom with a bathtub to unwind in.
+        
+        <br><br><b>King Bed Room:</b> Experience the ultimate in comfort and luxury in our King Bed Room, boasting a spacious king-sized bed. 
+        Relax with the convenience of a microwave, ensure your belongings are secure in the safe, and indulge in the larger bathroom, 
+        complete with a soothing whirlpool tub, offering a perfect retreat after a day of adventure. 
 
-    </div>
+		<br><br><i>No matter which room you choose, our lodge provides a range of options to make your stay enjoyable and memorable.</i>
+		<br><br></p>
+      </div>
   </div>
 
   <div class="contact">

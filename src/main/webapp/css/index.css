@@ -141,6 +141,7 @@ h1{/*headers set to be display font*/
 #aboutUs{
   background-color:#FFF5D3;
   color: #AA6D23;
+  box-shadow: inset 5px 5px 50px 0px rgba(179, 172, 148, 1), inset -5px -5px 50px 0px rgba(179, 172, 148, 1);
 }
 #aboutUs p{
   color: #004058;
@@ -150,6 +151,7 @@ h1{/*headers set to be display font*/
 #attractions{
   background-color:#004058;
   color: #AA6D23;
+  box-shadow: inset 5px 5px 40px 0px rgba(0, 45, 62, 1), inset -5px -5px 40px 0px rgba(0, 45, 62, 1)
 }
 #attractions h1{
   color:#FFF5D3;
