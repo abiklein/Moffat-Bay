@@ -160,10 +160,7 @@ window.onload = function() {
         if (checkoutDate <= checkinDate) {
             alert("Check-out date cannot be before or on check-in date.");
             checkoutInput.value = ""; // Clear the check-out date input.
-        } else {
-            // If the checkout date is valid, update the minimum check-out date.
-            setMinCheckOutDate();
-        }
+        } 
     });    
 </script>
 
